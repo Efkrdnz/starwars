@@ -11,16 +11,18 @@ public class ShipForwardOnKeyPressedProcedure {
 		if (!(entity instanceof Player player))
 			return;
 
-		StarwarsverseModVariables.PlayerVariables playerVars = player.getData(StarwarsverseModVariables.PLAYER_VARIABLES);
-		playerVars.ship_f = true;
+		// CRITICAL: Use the MCreator style variable setting with sync
+		{
+			StarwarsverseModVariables.PlayerVariables _vars = player.getData(StarwarsverseModVariables.PLAYER_VARIABLES);
+			_vars.ship_f = true;
+			_vars.syncPlayerVariables(player);
+		}
 
 		// add boost effect for engine startup
 		if (player.getVehicle() instanceof XwingAircraftEntity xwing) {
 			// trigger engine startup effects
 			triggerEngineEffects(xwing, true);
 		}
-
-		player.setData(StarwarsverseModVariables.PLAYER_VARIABLES, playerVars);
 	}
 
 	private static void triggerEngineEffects(XwingAircraftEntity xwing, boolean starting) {

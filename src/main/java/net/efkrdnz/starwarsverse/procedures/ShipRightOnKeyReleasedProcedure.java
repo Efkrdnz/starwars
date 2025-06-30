@@ -10,12 +10,15 @@ public class ShipRightOnKeyReleasedProcedure {
 	public static void execute(Entity entity) {
 		if (!(entity instanceof Player player))
 			return;
-		StarwarsverseModVariables.PlayerVariables playerVars = player.getData(StarwarsverseModVariables.PLAYER_VARIABLES);
-		playerVars.ship_r = false;
+		// CRITICAL: Use the MCreator style variable setting with sync
+		{
+			StarwarsverseModVariables.PlayerVariables _vars = player.getData(StarwarsverseModVariables.PLAYER_VARIABLES);
+			_vars.ship_r = false;
+			_vars.syncPlayerVariables(player);
+		}
 		if (player.getVehicle() instanceof XwingAircraftEntity xwing) {
 			returnToLevel(xwing);
 		}
-		player.setData(StarwarsverseModVariables.PLAYER_VARIABLES, playerVars);
 	}
 
 	private static void returnToLevel(XwingAircraftEntity xwing) {

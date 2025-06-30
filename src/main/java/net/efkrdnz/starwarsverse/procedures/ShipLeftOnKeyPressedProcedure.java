@@ -10,15 +10,18 @@ public class ShipLeftOnKeyPressedProcedure {
 	public static void execute(Entity entity) {
 		if (!(entity instanceof Player player))
 			return;
-		StarwarsverseModVariables.PlayerVariables playerVars = player.getData(StarwarsverseModVariables.PLAYER_VARIABLES);
-		playerVars.ship_l = true;
+		// CRITICAL: Use the MCreator style variable setting with sync
+		{
+			StarwarsverseModVariables.PlayerVariables _vars = player.getData(StarwarsverseModVariables.PLAYER_VARIABLES);
+			_vars.ship_l = true;
+			_vars.syncPlayerVariables(player);
+		}
 		if (player.getVehicle() instanceof XwingAircraftEntity xwing) {
 			// apply banking through pitch adjustment
 			applyBanking(xwing, -1);
 			// trigger thruster effects
 			triggerThrusterEffects(xwing, "left");
 		}
-		player.setData(StarwarsverseModVariables.PLAYER_VARIABLES, playerVars);
 	}
 
 	private static void applyBanking(XwingAircraftEntity xwing, int direction) {

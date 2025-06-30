@@ -11,17 +11,17 @@ public class ShipBackwardOnKeyPressedProcedure {
 	public static void execute(Entity entity) {
 		if (!(entity instanceof Player player))
 			return;
-
-		StarwarsverseModVariables.PlayerVariables playerVars = player.getData(StarwarsverseModVariables.PLAYER_VARIABLES);
-		playerVars.ship_b = true;
-
+		// CRITICAL: Use the MCreator style variable setting with sync
+		{
+			StarwarsverseModVariables.PlayerVariables _vars = player.getData(StarwarsverseModVariables.PLAYER_VARIABLES);
+			_vars.ship_b = true;
+			_vars.syncPlayerVariables(player);
+		}
 		if (player.getVehicle() instanceof XwingAircraftEntity xwing) {
 			// apply reverse thruster effects
 			triggerReverseThrusterEffects(xwing);
 			applySpeedBrakes(xwing);
 		}
-
-		player.setData(StarwarsverseModVariables.PLAYER_VARIABLES, playerVars);
 	}
 
 	private static void triggerReverseThrusterEffects(XwingAircraftEntity xwing) {

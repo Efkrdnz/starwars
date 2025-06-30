@@ -11,13 +11,16 @@ public class ShipBackwardOnKeyReleasedProcedure {
 	public static void execute(Entity entity) {
 		if (!(entity instanceof Player player))
 			return;
-		StarwarsverseModVariables.PlayerVariables playerVars = player.getData(StarwarsverseModVariables.PLAYER_VARIABLES);
-		playerVars.ship_b = false;
-		// emergency brake for quick taps (add timing logic later if needed)
+		// CRITICAL: Use the MCreator style variable setting with sync
+		{
+			StarwarsverseModVariables.PlayerVariables _vars = player.getData(StarwarsverseModVariables.PLAYER_VARIABLES);
+			_vars.ship_b = false;
+			_vars.syncPlayerVariables(player);
+		}
+		// emergency brake for quick taps
 		if (player.getVehicle() instanceof XwingAircraftEntity xwing) {
 			applyEmergencyBrake(xwing);
 		}
-		player.setData(StarwarsverseModVariables.PLAYER_VARIABLES, playerVars);
 	}
 
 	private static void applyEmergencyBrake(XwingAircraftEntity xwing) {

@@ -10,14 +10,17 @@ public class ShipForwardOnKeyReleasedProcedure {
 	public static void execute(Entity entity) {
 		if (!(entity instanceof Player player))
 			return;
-		StarwarsverseModVariables.PlayerVariables playerVars = player.getData(StarwarsverseModVariables.PLAYER_VARIABLES);
-		playerVars.ship_f = false;
-		// afterburner effect for quick taps (you can add timing logic later)
+		// CRITICAL: Use the MCreator style variable setting with sync
+		{
+			StarwarsverseModVariables.PlayerVariables _vars = player.getData(StarwarsverseModVariables.PLAYER_VARIABLES);
+			_vars.ship_f = false;
+			_vars.syncPlayerVariables(player);
+		}
+		// afterburner effect for quick taps
 		if (player.getVehicle() instanceof XwingAircraftEntity xwing) {
 			// trigger engine shutdown effects
 			triggerEngineEffects(xwing, false);
 		}
-		player.setData(StarwarsverseModVariables.PLAYER_VARIABLES, playerVars);
 	}
 
 	private static void triggerEngineEffects(XwingAircraftEntity xwing, boolean starting) {
