@@ -2083,7 +2083,7 @@
       "name": "XwingAircraft",
       "type": "animatedentity",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "xwing_aircraft",
       "metadata": {
         "files": [
@@ -2270,25 +2270,6 @@
       "path": "~/Force/Structure/Gui"
     },
     {
-      "name": "XwingAircraftOnEntityTickUpdate",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "xwing_aircraft_on_entity_tick_update",
-      "metadata": {
-        "files": [
-          "src/main/java/net/efkrdnz/starwarsverse/procedures/XwingAircraftOnEntityTickUpdateProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Aircrafts/Xwing"
-    },
-    {
       "name": "ReturnRidingAircraft",
       "type": "procedure",
       "compiles": true,
@@ -2364,7 +2345,7 @@
       "name": "ShipForwardOnKeyPressed",
       "type": "procedure",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "ship_forward_on_key_pressed",
       "metadata": {
         "files": [
@@ -2383,7 +2364,7 @@
       "name": "ShipForwardOnKeyReleased",
       "type": "procedure",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "ship_forward_on_key_released",
       "metadata": {
         "files": [
@@ -2402,7 +2383,7 @@
       "name": "ShipLeftOnKeyPressed",
       "type": "procedure",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "ship_left_on_key_pressed",
       "metadata": {
         "files": [
@@ -2421,7 +2402,7 @@
       "name": "ShipLeftOnKeyReleased",
       "type": "procedure",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "ship_left_on_key_released",
       "metadata": {
         "files": [
@@ -2440,7 +2421,7 @@
       "name": "ShipRightOnKeyPressed",
       "type": "procedure",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "ship_right_on_key_pressed",
       "metadata": {
         "files": [
@@ -2459,7 +2440,7 @@
       "name": "ShipRightOnKeyReleased",
       "type": "procedure",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "ship_right_on_key_released",
       "metadata": {
         "files": [
@@ -2478,7 +2459,7 @@
       "name": "ShipBackwardOnKeyPressed",
       "type": "procedure",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "ship_backward_on_key_pressed",
       "metadata": {
         "files": [
@@ -2497,7 +2478,7 @@
       "name": "ShipBackwardOnKeyReleased",
       "type": "procedure",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "ship_backward_on_key_released",
       "metadata": {
         "files": [
@@ -2513,115 +2494,18 @@
       "path": "~/Aircrafts/Controls"
     },
     {
-      "name": "XwingFlightHelper",
-      "type": "code",
+      "name": "XwingAircraftOnEntityTickUpdate",
+      "type": "procedure",
       "compiles": true,
-      "locked_code": true,
-      "registry_name": "xwing_flight_helper",
+      "locked_code": false,
+      "registry_name": "xwing_aircraft_on_entity_tick_update",
       "metadata": {
         "files": [
-          "src/main/java/net/efkrdnz/starwarsverse/XwingFlightHelper.java"
-        ]
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/XwingAircraftOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": []
       },
       "path": "~/Aircrafts/Xwing"
-    },
-    {
-      "name": "EnhancedShipForward",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "enhanced_ship_forward",
-      "metadata": {
-        "files": [
-          "src/main/java/net/efkrdnz/starwarsverse/procedures/EnhancedShipForwardProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Aircrafts"
-    },
-    {
-      "name": "EnhancedShipLeft",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "enhanced_ship_left",
-      "metadata": {
-        "files": [
-          "src/main/java/net/efkrdnz/starwarsverse/procedures/EnhancedShipLeftProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Aircrafts"
-    },
-    {
-      "name": "EnhancedShipRight",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "enhanced_ship_right",
-      "metadata": {
-        "files": [
-          "src/main/java/net/efkrdnz/starwarsverse/procedures/EnhancedShipRightProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Aircrafts"
-    },
-    {
-      "name": "EnhancedShipBackward",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "enhanced_ship_backward",
-      "metadata": {
-        "files": [
-          "src/main/java/net/efkrdnz/starwarsverse/procedures/EnhancedShipBackwardProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Aircrafts"
-    },
-    {
-      "name": "XwingLandingSystem",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "xwing_landing_system",
-      "metadata": {
-        "files": [
-          "src/main/java/net/efkrdnz/starwarsverse/procedures/XwingLandingSystemProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Aircrafts"
-    },
-    {
-      "name": "XwingCombatManeuvers",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "xwing_combat_maneuvers",
-      "metadata": {
-        "files": [
-          "src/main/java/net/efkrdnz/starwarsverse/procedures/XwingCombatManeuversProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Aircrafts"
-    },
-    {
-      "name": "XwingHUD",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "xwing_hud",
-      "metadata": {
-        "files": [
-          "src/main/java/net/efkrdnz/starwarsverse/procedures/XwingHUDProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Aircrafts"
     }
   ],
   "variable_elements": [
