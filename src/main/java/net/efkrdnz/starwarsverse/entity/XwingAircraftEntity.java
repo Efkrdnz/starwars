@@ -137,7 +137,7 @@ public class XwingAircraftEntity extends PathfinderMob implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		XwingAircraftOnEntityTickUpdateProcedure.execute();
+		XwingAircraftOnEntityTickUpdateProcedure.execute(this);
 		this.refreshDimensions();
 	}
 

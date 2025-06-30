@@ -2503,7 +2503,12 @@
         "files": [
           "src/main/java/net/efkrdnz/starwarsverse/procedures/XwingAircraftOnEntityTickUpdateProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Aircrafts/Xwing"
     }
