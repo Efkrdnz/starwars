@@ -2530,6 +2530,61 @@
         ]
       },
       "path": "~/Aircrafts/Xwing"
+    },
+    {
+      "name": "ShipCameraSystem",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ship_camera_system",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/ShipCameraSystem.java"
+        ]
+      },
+      "path": "~/Aircrafts/Controls/Visuals"
+    },
+    {
+      "name": "CheckShipInvisibility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "check_ship_invisibility",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/CheckShipInvisibilityProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Aircrafts/Controls/Visuals"
+    },
+    {
+      "name": "ForceThirdPerson",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "force_third_person",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ForceThirdPersonProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Aircrafts/Controls/Visuals"
+    },
+    {
+      "name": "ShipCameraConfig",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ship_camera_config",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ShipCameraConfigProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Aircrafts/Controls/Visuals"
     }
   ],
   "variable_elements": [
