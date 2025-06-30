@@ -1,0 +1,7 @@
+{
+  "parent": "starwarsverse:custom/anakin_lightsaber_-purple",
+  "textures": {
+    "0": "starwarsverse:block/anakin_purple",
+    "particle": "starwarsverse:item/anakin_lightsaber"
+  }
+}

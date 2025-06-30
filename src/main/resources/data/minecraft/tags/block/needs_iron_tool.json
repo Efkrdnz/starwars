@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "starwarsverse:aircraft_engine",
+    "starwarsverse:aircraft_mainframe",
+    "starwarsverse:steel_chasing"
+  ]
+}

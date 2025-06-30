@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "starwarsverse:block/aircraftworkbench",
+    "up": "starwarsverse:block/aircraftworkbench",
+    "north": "starwarsverse:block/aircraftworkbench",
+    "east": "starwarsverse:block/aircraftworkbench",
+    "south": "starwarsverse:block/aircraftworkbench",
+    "west": "starwarsverse:block/aircraftworkbench",
+    "particle": "starwarsverse:block/aircraftworkbench"
+  },
+  "render_type": "solid"
+}

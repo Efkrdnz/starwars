@@ -1,0 +1,57 @@
+{
+  "parent": "starwarsverse:custom/anakin_lightsaber",
+  "textures": {
+    "0": "starwarsverse:block/anakin_default",
+    "particle": "starwarsverse:item/anakin_lightsaber"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "starwarsverse:lightsaber_anakin_color": 1
+      },
+      "model": "starwarsverse:item/lightsaber_anakin_0"
+    },
+    {
+      "predicate": {
+        "starwarsverse:lightsaber_anakin_color": 2
+      },
+      "model": "starwarsverse:item/lightsaber_anakin_1"
+    },
+    {
+      "predicate": {
+        "starwarsverse:lightsaber_anakin_color": 3
+      },
+      "model": "starwarsverse:item/lightsaber_anakin_2"
+    },
+    {
+      "predicate": {
+        "starwarsverse:lightsaber_anakin_color": 4
+      },
+      "model": "starwarsverse:item/lightsaber_anakin_3"
+    },
+    {
+      "predicate": {
+        "starwarsverse:lightsaber_anakin_color": 5
+      },
+      "model": "starwarsverse:item/lightsaber_anakin_4"
+    },
+    {
+      "predicate": {
+        "starwarsverse:lightsaber_anakin_color": 6
+      },
+      "model": "starwarsverse:item/lightsaber_anakin_5"
+    },
+    {
+      "predicate": {
+        "starwarsverse:lightsaber_anakin_color": 7
+      },
+      "model": "starwarsverse:item/lightsaber_anakin_6"
+    },
+    {
+      "predicate": {
+        "starwarsverse:lightsaber_anakin_color": 8
+      },
+      "model": "starwarsverse:item/lightsaber_anakin_7"
+    }
+  ]
+}

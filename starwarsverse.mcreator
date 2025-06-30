@@ -1,0 +1,3174 @@
+{
+  "mod_elements": [
+    {
+      "name": "PlanetEarth",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "planet_earth",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/client/renderer/PlanetEarthRenderer.java",
+          "src/main/java/net/efkrdnz/starwarsverse/entity/model/PlanetEarthModel.java",
+          "src/main/java/net/efkrdnz/starwarsverse/entity/PlanetEarthEntity.java"
+        ]
+      },
+      "path": "~/Space/Planets"
+    },
+    {
+      "name": "Space",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "space",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/starwarsverse/dimension/space.json",
+          "src/main/resources/data/starwarsverse/dimension_type/space.json",
+          "src/main/java/net/efkrdnz/starwarsverse/world/dimension/SpaceDimension.java"
+        ]
+      },
+      "path": "~/Space/Space"
+    },
+    {
+      "name": "SpaceStarParticles",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "space_star_particles",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/SpaceStarParticlesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Space/Space"
+    },
+    {
+      "name": "SpaceVoidDamageCancel",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "space_void_damage_cancel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/SpaceVoidDamageCancelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Space/Space"
+    },
+    {
+      "name": "SpaceBiome",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "space_biome",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/starwarsverse/worldgen/configured_feature/space_biome_tree.json",
+          "src/main/resources/data/starwarsverse/worldgen/placed_feature/space_biome_tree.json",
+          "src/main/resources/data/starwarsverse/worldgen/biome/space_biome.json"
+        ]
+      },
+      "path": "~/Space/Space"
+    },
+    {
+      "name": "PlanetRendering",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "planet_rendering",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/PlanetRenderingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Space/Planets/Rendering"
+    },
+    {
+      "name": "PlanetTatooine",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "planet_tatooine",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/entity/PlanetTatooineEntity.java",
+          "src/main/java/net/efkrdnz/starwarsverse/client/renderer/PlanetTatooineRenderer.java",
+          "src/main/java/net/efkrdnz/starwarsverse/entity/model/PlanetTatooineModel.java",
+          "src/main/java/net/efkrdnz/starwarsverse/entity/layer/PlanetTatooineLayer.java"
+        ]
+      },
+      "path": "~/Space/Planets"
+    },
+    {
+      "name": "LightsaberAnakinColorReturn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightsaber_anakin_color_return",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/LightsaberAnakinColorReturnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Lightsabers/Items/Anakin"
+    },
+    {
+      "name": "LightsaberAnakin",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightsaber_anakin",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/starwarsverse/models/item/lightsaber_anakin_1.json",
+          "src/main/resources/assets/starwarsverse/models/item/lightsaber_anakin_7.json",
+          "src/main/resources/assets/starwarsverse/models/item/lightsaber_anakin_2.json",
+          "src/main/resources/assets/starwarsverse/models/item/lightsaber_anakin_6.json",
+          "src/main/resources/assets/starwarsverse/models/item/lightsaber_anakin_3.json",
+          "src/main/resources/assets/starwarsverse/models/item/lightsaber_anakin_5.json",
+          "src/main/resources/assets/starwarsverse/models/item/lightsaber_anakin.json",
+          "src/main/resources/assets/starwarsverse/models/item/lightsaber_anakin_0.json",
+          "src/main/resources/assets/starwarsverse/models/item/lightsaber_anakin_4.json",
+          "src/main/java/net/efkrdnz/starwarsverse/item/LightsaberAnakinItem.java"
+        ]
+      },
+      "path": "~/Lightsabers/Items/Anakin"
+    },
+    {
+      "name": "KyberCrystalRed",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kyber_crystal_red",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/starwarsverse/models/item/kyber_crystal_red.json",
+          "src/main/java/net/efkrdnz/starwarsverse/item/KyberCrystalRedItem.java"
+        ]
+      },
+      "path": "~/Items/Kyber Crystals"
+    },
+    {
+      "name": "KyberCrystalBlue",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kyber_crystal_blue",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/starwarsverse/models/item/kyber_crystal_blue.json",
+          "src/main/java/net/efkrdnz/starwarsverse/item/KyberCrystalBlueItem.java"
+        ]
+      },
+      "path": "~/Items/Kyber Crystals"
+    },
+    {
+      "name": "KyberCrystalGreen",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kyber_crystal_green",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/item/KyberCrystalGreenItem.java",
+          "src/main/resources/assets/starwarsverse/models/item/kyber_crystal_green.json"
+        ]
+      },
+      "path": "~/Items/Kyber Crystals"
+    },
+    {
+      "name": "KyberCrystalWhite",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kyber_crystal_white",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/item/KyberCrystalWhiteItem.java",
+          "src/main/resources/assets/starwarsverse/models/item/kyber_crystal_white.json"
+        ]
+      },
+      "path": "~/Items/Kyber Crystals"
+    },
+    {
+      "name": "KyberCrystalYellow",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kyber_crystal_yellow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/item/KyberCrystalYellowItem.java",
+          "src/main/resources/assets/starwarsverse/models/item/kyber_crystal_yellow.json"
+        ]
+      },
+      "path": "~/Items/Kyber Crystals"
+    },
+    {
+      "name": "KyberCrystalOrange",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kyber_crystal_orange",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/starwarsverse/models/item/kyber_crystal_orange.json",
+          "src/main/java/net/efkrdnz/starwarsverse/item/KyberCrystalOrangeItem.java"
+        ]
+      },
+      "path": "~/Items/Kyber Crystals"
+    },
+    {
+      "name": "KyberCrystalPurple",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kyber_crystal_purple",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/starwarsverse/models/item/kyber_crystal_purple.json",
+          "src/main/java/net/efkrdnz/starwarsverse/item/KyberCrystalPurpleItem.java"
+        ]
+      },
+      "path": "~/Items/Kyber Crystals"
+    },
+    {
+      "name": "KyberCrystalBlack",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kyber_crystal_black",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/item/KyberCrystalBlackItem.java",
+          "src/main/resources/assets/starwarsverse/models/item/kyber_crystal_black.json"
+        ]
+      },
+      "path": "~/Items/Kyber Crystals"
+    },
+    {
+      "name": "KyberInfuser",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kyber_infuser",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/starwarsverse/models/block/kyber_infuser.json",
+          "src/main/resources/data/starwarsverse/loot_table/blocks/kyber_infuser.json",
+          "src/main/resources/assets/starwarsverse/models/item/kyber_infuser.json",
+          "src/main/resources/assets/starwarsverse/blockstates/kyber_infuser.json",
+          "src/main/java/net/efkrdnz/starwarsverse/block/KyberInfuserBlock.java",
+          "src/main/java/net/efkrdnz/starwarsverse/block/entity/KyberInfuserBlockEntity.java"
+        ]
+      },
+      "path": "~/Blocks/KyberInfuser"
+    },
+    {
+      "name": "KyberInfuserGui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kyber_infuser_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/client/gui/KyberInfuserGuiScreen.java",
+          "src/main/java/net/efkrdnz/starwarsverse/network/KyberInfuserGuiSlotMessage.java",
+          "src/main/java/net/efkrdnz/starwarsverse/world/inventory/KyberInfuserGuiMenu.java"
+        ]
+      },
+      "path": "~/Blocks/KyberInfuser/Gui"
+    },
+    {
+      "name": "KyberInfuserGuiWhileThisGUIIsOpenTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kyber_infuser_gui_while_this_gui_is_open_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/KyberInfuserGuiWhileThisGUIIsOpenTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Blocks/KyberInfuser/Gui"
+    },
+    {
+      "name": "KyberInfuserCollect",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kyber_infuser_collect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/KyberInfuserCollectProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Blocks/KyberInfuser/Gui"
+    },
+    {
+      "name": "LightsaberTurnoffCon",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "lightsaber_turnoff_con",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/LightsaberTurnoffConProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightsabers/Functions"
+    },
+    {
+      "name": "LightsaberRightClick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightsaber_right_click",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/LightsaberRightClickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightsabers/Functions"
+    },
+    {
+      "name": "IsNotLightsaber",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_not_lightsaber",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/IsNotLightsaberProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Blocks/KyberInfuser/Gui"
+    },
+    {
+      "name": "IsNotKyber",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_not_kyber",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/IsNotKyberProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Blocks/KyberInfuser/Gui"
+    },
+    {
+      "name": "LightsaberAmbientSound",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightsaber_ambient_sound",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/LightsaberAmbientSoundProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightsabers/Functions"
+    },
+    {
+      "name": "Forcepushuse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forcepushuse",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ForcepushuseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "target",
+            "type": "entity"
+          },
+          {
+            "name": "charge",
+            "type": "number"
+          },
+          {
+            "name": "cost",
+            "type": "number"
+          },
+          {
+            "name": "max_charge",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Force/Powers/Force Push"
+    },
+    {
+      "name": "Ability1",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/network/Ability1Message.java"
+        ]
+      },
+      "path": "~/Force/Structure/Keys"
+    },
+    {
+      "name": "Ability2",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/network/Ability2Message.java"
+        ]
+      },
+      "path": "~/Force/Structure/Keys"
+    },
+    {
+      "name": "Ability3",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/network/Ability3Message.java"
+        ]
+      },
+      "path": "~/Force/Structure/Keys"
+    },
+    {
+      "name": "Forcemenugui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forcemenugui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/world/inventory/ForcemenuguiMenu.java",
+          "src/main/java/net/efkrdnz/starwarsverse/client/gui/ForcemenuguiScreen.java",
+          "src/main/java/net/efkrdnz/starwarsverse/network/ForcemenuguiButtonMessage.java"
+        ]
+      },
+      "path": "~/Force/Structure/Gui"
+    },
+    {
+      "name": "ForcePowers",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "force_powers",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/ForcePowers.java"
+        ]
+      },
+      "path": "~/Force/Structure"
+    },
+    {
+      "name": "ForceHoldSystem",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "force_hold_system",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/ForceHoldSystem.java"
+        ]
+      },
+      "path": "~/Force/Structure"
+    },
+    {
+      "name": "Ability2OnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_2_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/Ability2OnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Force/Structure/Keys"
+    },
+    {
+      "name": "Ability3OnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_3_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/Ability3OnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Force/Structure/Keys"
+    },
+    {
+      "name": "ForcemenuguiThisGUIIsClosed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forcemenugui_this_gui_is_closed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ForcemenuguiThisGUIIsClosedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Force/Structure/Gui"
+    },
+    {
+      "name": "Slotselect1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slotselect_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/Slotselect1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Force/Structure/Gui"
+    },
+    {
+      "name": "Slotselect2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slotselect_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/Slotselect2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Force/Structure/Gui"
+    },
+    {
+      "name": "Slotselect3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slotselect_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/Slotselect3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Force/Structure/Gui"
+    },
+    {
+      "name": "AbilitySelectForcePush",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_force_push",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/AbilitySelectForcePushProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Force/Structure/Gui"
+    },
+    {
+      "name": "AbilityGui",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/network/AbilityGuiMessage.java"
+        ]
+      },
+      "path": "~/Force/Structure/Keys"
+    },
+    {
+      "name": "AbilityGuiOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_gui_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/AbilityGuiOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Force/Structure/Keys"
+    },
+    {
+      "name": "ForceUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "force_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ForceUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "force_entity",
+            "type": "entity"
+          },
+          {
+            "name": "force_charging",
+            "type": "number"
+          },
+          {
+            "name": "force_name",
+            "type": "string"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Force/Structure"
+    },
+    {
+      "name": "Ability1OnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_1_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/Ability1OnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Force/Structure/Keys"
+    },
+    {
+      "name": "ReturnForcePower",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_force_power",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ReturnForcePowerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Force Power"
+    },
+    {
+      "name": "OverlayForcePower",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "overlay_force_power",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/client/screens/OverlayForcePowerOverlay.java"
+        ]
+      },
+      "path": "~/Overlay/Force Power"
+    },
+    {
+      "name": "ForceReplenish",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "force_replenish",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ForceReplenishProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Force/Structure"
+    },
+    {
+      "name": "MaxForcePower",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "max_force_power",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/MaxForcePowerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Force/Structure"
+    },
+    {
+      "name": "ForceCharging",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "force_charging",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ForceChargingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Force/Structure"
+    },
+    {
+      "name": "Ability1OnKeyReleased",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_1_on_key_released",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/Ability1OnKeyReleasedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Force/Structure/Keys"
+    },
+    {
+      "name": "ForcePushAreaUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "force_push_area_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ForcePushAreaUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "target",
+            "type": "entity"
+          },
+          {
+            "name": "charge",
+            "type": "number"
+          },
+          {
+            "name": "cost",
+            "type": "number"
+          },
+          {
+            "name": "max_charge",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Force/Powers/Force Push"
+    },
+    {
+      "name": "IsUsingForce",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_using_force",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/IsUsingForceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Force Charging"
+    },
+    {
+      "name": "ReturnUsingForceName",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_using_force_name",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ReturnUsingForceNameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Force Charging"
+    },
+    {
+      "name": "ReturnUsingForceChargeRate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_using_force_charge_rate",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ReturnUsingForceChargeRateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Force Charging"
+    },
+    {
+      "name": "OverlayForceCharging",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "overlay_force_charging",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/client/screens/OverlayForceChargingOverlay.java"
+        ]
+      },
+      "path": "~/Overlay/Force Charging"
+    },
+    {
+      "name": "ForcePush",
+      "type": "damagetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "force_push",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/starwarsverse/damage_type/force_push.json"
+        ]
+      },
+      "path": "~/DamageTypes"
+    },
+    {
+      "name": "ScreenShake",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "screen_shake",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/potion/ScreenShakeMobEffect.java"
+        ]
+      },
+      "path": "~/Effects/ScreenShake"
+    },
+    {
+      "name": "ScreenShakeProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "screen_shake_procedure",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ScreenShakeProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Effects/ScreenShake"
+    },
+    {
+      "name": "ScreenShakeCe",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "screen_shake_ce",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/ScreenShakeCe.java"
+        ]
+      },
+      "path": "~/Effects/ScreenShake"
+    },
+    {
+      "name": "ScreenShakeInsensity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "screen_shake_insensity",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ScreenShakeInsensityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Effects/ScreenShake"
+    },
+    {
+      "name": "VisualForcePush",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "visual_force_push",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/VisualForcePushProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Force/Structure/Visuals"
+    },
+    {
+      "name": "AbilitySelectForceHold",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_force_hold",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/AbilitySelectForceHoldProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Force/Structure/Gui"
+    },
+    {
+      "name": "ForceHoldUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "force_hold_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ForceHoldUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Force/Powers/Telekinesis"
+    },
+    {
+      "name": "ForceHoldTargetSet",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "force_hold_target_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ForceHoldTargetSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Force/Powers/Telekinesis"
+    },
+    {
+      "name": "ReturnForceGrabTarget",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_force_grab_target",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ReturnForceGrabTargetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Overlay/Force Charging"
+    },
+    {
+      "name": "ReturnForceGrabDistance",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_force_grab_distance",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ReturnForceGrabDistanceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay/Force Charging"
+    },
+    {
+      "name": "LightsaberCountDooku",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightsaber_count_dooku",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/starwarsverse/models/item/lightsaber_count_dooku_4.json",
+          "src/main/resources/assets/starwarsverse/models/item/lightsaber_count_dooku_6.json",
+          "src/main/resources/assets/starwarsverse/models/item/lightsaber_count_dooku_5.json",
+          "src/main/resources/assets/starwarsverse/models/item/lightsaber_count_dooku_1.json",
+          "src/main/java/net/efkrdnz/starwarsverse/item/LightsaberCountDookuItem.java",
+          "src/main/resources/assets/starwarsverse/models/item/lightsaber_count_dooku.json",
+          "src/main/resources/assets/starwarsverse/models/item/lightsaber_count_dooku_0.json",
+          "src/main/resources/assets/starwarsverse/models/item/lightsaber_count_dooku_2.json",
+          "src/main/resources/assets/starwarsverse/models/item/lightsaber_count_dooku_3.json",
+          "src/main/resources/assets/starwarsverse/models/item/lightsaber_count_dooku_7.json"
+        ]
+      },
+      "path": "~/Lightsabers/Items/Count Dooku"
+    },
+    {
+      "name": "LightsaberCountDookuColorReturn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightsaber_count_dooku_color_return",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/LightsaberCountDookuColorReturnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Lightsabers/Items/Count Dooku"
+    },
+    {
+      "name": "CommandForceAreaIndicatorToggle",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "command_force_area_indicator_toggle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/CommandForceAreaIndicatorToggleProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Command/User/AreaIndicator"
+    },
+    {
+      "name": "StarWarsUser",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_wars_user",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/command/StarWarsUserCommand.java"
+        ]
+      },
+      "path": "~/Command/User"
+    },
+    {
+      "name": "LightsaberDamageWhileDisabled",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightsaber_damage_while_disabled",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/LightsaberDamageWhileDisabledProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Lightsabers/Functions"
+    },
+    {
+      "name": "ForceThrowSystem",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "force_throw_system",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/ForceThrowSystem.java"
+        ]
+      },
+      "path": "~/Force/Powers/Telekinesis"
+    },
+    {
+      "name": "ForceHoldScrollHandler",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "force_hold_scroll_handler",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/ForceHoldScrollHandler.java"
+        ]
+      }
+    },
+    {
+      "name": "HotbarChangeBlocker",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "hotbar_change_blocker",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/HotbarChangeBlocker.java"
+        ]
+      }
+    },
+    {
+      "name": "ForcePushPullPacket",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "force_push_pull_packet",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/ForcePushPullPacket.java"
+        ]
+      }
+    },
+    {
+      "name": "ForcePushPullHandler",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "force_push_pull_handler",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/ForcePushPullHandler.java"
+        ]
+      }
+    },
+    {
+      "name": "Forcepulluse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "forcepulluse",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ForcepulluseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "target",
+            "type": "entity"
+          },
+          {
+            "name": "charge",
+            "type": "number"
+          },
+          {
+            "name": "cost",
+            "type": "number"
+          },
+          {
+            "name": "max_charge",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Force/Powers/Force Pull"
+    },
+    {
+      "name": "ForcepulluseSneak",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forcepulluse_sneak",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ForcepulluseSneakProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "target",
+            "type": "entity"
+          },
+          {
+            "name": "charge",
+            "type": "number"
+          },
+          {
+            "name": "cost",
+            "type": "number"
+          },
+          {
+            "name": "max_charge",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Force/Powers/Force Pull"
+    },
+    {
+      "name": "AbilitySelectForcePull",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_force_pull",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/AbilitySelectForcePullProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Force/Structure/Gui"
+    },
+    {
+      "name": "VisualForcePull",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "visual_force_pull",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/VisualForcePullProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Force/Structure/Visuals"
+    },
+    {
+      "name": "ForcePull",
+      "type": "damagetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "force_pull",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/starwarsverse/damage_type/force_pull.json"
+        ]
+      },
+      "path": "~/DamageTypes"
+    },
+    {
+      "name": "ForceDamageMark",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "force_damage_mark",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ForceDamageMarkProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/DamageTypes"
+    },
+    {
+      "name": "SteelIngot",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_ingot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/item/SteelIngotItem.java",
+          "src/main/resources/assets/starwarsverse/models/item/steel_ingot.json"
+        ]
+      },
+      "path": "~/Items/Steel"
+    },
+    {
+      "name": "SteelChasing",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_chasing",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/starwarsverse/models/item/steel_chasing.json",
+          "src/main/resources/assets/starwarsverse/blockstates/steel_chasing.json",
+          "src/main/resources/data/starwarsverse/loot_table/blocks/steel_chasing.json",
+          "src/main/resources/assets/starwarsverse/models/block/steel_chasing.json",
+          "src/main/java/net/efkrdnz/starwarsverse/block/SteelChasingBlock.java"
+        ]
+      },
+      "path": "~/Blocks/SteelChasing"
+    },
+    {
+      "name": "SteelBlock",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/starwarsverse/recipe/steel_block.json"
+        ]
+      },
+      "path": "~/Recipe"
+    },
+    {
+      "name": "AircraftMainframe",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aircraft_mainframe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/starwarsverse/loot_table/blocks/aircraft_mainframe.json",
+          "src/main/resources/assets/starwarsverse/models/item/aircraft_mainframe.json",
+          "src/main/resources/assets/starwarsverse/models/block/aircraft_mainframe.json",
+          "src/main/resources/assets/starwarsverse/blockstates/aircraft_mainframe.json",
+          "src/main/java/net/efkrdnz/starwarsverse/block/AircraftMainframeBlock.java"
+        ]
+      },
+      "path": "~/Blocks/AirCraftMainframe"
+    },
+    {
+      "name": "AircraftEngine",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aircraft_engine",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/starwarsverse/models/item/aircraft_engine.json",
+          "src/main/resources/assets/starwarsverse/models/block/aircraft_engine.json",
+          "src/main/resources/assets/starwarsverse/blockstates/aircraft_engine.json",
+          "src/main/resources/data/starwarsverse/loot_table/blocks/aircraft_engine.json",
+          "src/main/java/net/efkrdnz/starwarsverse/block/AircraftEngineBlock.java"
+        ]
+      },
+      "path": "~/Blocks/AircraftEngine"
+    },
+    {
+      "name": "AircraftWorkbench",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aircraft_workbench",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/block/entity/AircraftWorkbenchBlockEntity.java",
+          "src/main/java/net/efkrdnz/starwarsverse/block/AircraftWorkbenchBlock.java",
+          "src/main/resources/assets/starwarsverse/blockstates/aircraft_workbench.json",
+          "src/main/resources/assets/starwarsverse/models/block/aircraft_workbench.json",
+          "src/main/resources/data/starwarsverse/loot_table/blocks/aircraft_workbench.json",
+          "src/main/resources/assets/starwarsverse/models/item/aircraft_workbench.json"
+        ]
+      },
+      "path": "~/Blocks/AircraftWorkbench"
+    },
+    {
+      "name": "GuiAircraftWorkbench",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gui_aircraft_workbench",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/world/inventory/GuiAircraftWorkbenchMenu.java",
+          "src/main/java/net/efkrdnz/starwarsverse/client/gui/GuiAircraftWorkbenchScreen.java"
+        ]
+      },
+      "path": "~/Blocks/AircraftWorkbench"
+    },
+    {
+      "name": "CommandAdminForceToggle",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "command_admin_force_toggle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/CommandAdminForceToggleProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Command/Admin/Player/Force"
+    },
+    {
+      "name": "CommandAdminForceLevel",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "command_admin_force_level",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/CommandAdminForceLevelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Command/Admin/Player/Force"
+    },
+    {
+      "name": "CommandAdminForcePowerRefill",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "command_admin_force_power_refill",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/CommandAdminForcePowerRefillProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Command/Admin/Player/Force"
+    },
+    {
+      "name": "Starwarsadmin",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starwarsadmin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/command/StarwarsadminCommand.java"
+        ]
+      },
+      "path": "~/Command/Admin"
+    },
+    {
+      "name": "ForceHandAnimation",
+      "type": "mixin",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "force_hand_animation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/mixins/ForceHandAnimationMixin.java"
+        ]
+      },
+      "path": "~/Mixin"
+    },
+    {
+      "name": "ForceOffhandRender",
+      "type": "mixin",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "force_offhand_render",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/mixins/ForceOffhandRenderMixin.java"
+        ]
+      },
+      "path": "~/Mixin"
+    },
+    {
+      "name": "SetupAnimations",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "setup_animations",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/SetupAnimationsProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "OffHandVisibility",
+      "type": "mixin",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "off_hand_visibility",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/mixins/OffHandVisibilityMixin.java"
+        ]
+      },
+      "path": "~/Mixin"
+    },
+    {
+      "name": "LightsaberLightBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightsaber_light_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/starwarsverse/blockstates/lightsaber_light_block.json",
+          "src/main/resources/data/starwarsverse/loot_table/blocks/lightsaber_light_block.json",
+          "src/main/java/net/efkrdnz/starwarsverse/block/LightsaberLightBlockBlock.java",
+          "src/main/resources/assets/starwarsverse/models/item/lightsaber_light_block.json",
+          "src/main/resources/assets/starwarsverse/models/block/lightsaber_light_block.json",
+          "src/main/java/net/efkrdnz/starwarsverse/block/entity/LightsaberLightBlockBlockEntity.java"
+        ]
+      },
+      "path": "~/Blocks/TemporaryLightBlock"
+    },
+    {
+      "name": "LightsaberLightBlockSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "lightsaber_light_block_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/LightsaberLightBlockSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightsabers/Functions"
+    },
+    {
+      "name": "LightsaberLightBlockBlockAdded",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightsaber_light_block_block_added",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/LightsaberLightBlockBlockAddedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/TemporaryLightBlock"
+    },
+    {
+      "name": "LightsaberLightBlockOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "lightsaber_light_block_on_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/LightsaberLightBlockOnTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/TemporaryLightBlock"
+    },
+    {
+      "name": "Lightning",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/client/particle/LightningParticle.java",
+          "src/main/resources/assets/starwarsverse/particles/lightning.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "LightningBase",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_base",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/starwarsverse/particles/lightning_base.json",
+          "src/main/java/net/efkrdnz/starwarsverse/client/particle/LightningBaseParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "ForceLightningUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "force_lightning_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ForceLightningUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Force/Powers/ForceLightning"
+    },
+    {
+      "name": "AbilitySelectForceLightning",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_force_lightning",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/AbilitySelectForceLightningProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Force/Structure/Gui"
+    },
+    {
+      "name": "ForceLightning",
+      "type": "damagetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "force_lightning",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/starwarsverse/damage_type/force_lightning.json"
+        ]
+      },
+      "path": "~/DamageTypes"
+    },
+    {
+      "name": "LightningRed",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_red",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/client/particle/LightningRedParticle.java",
+          "src/main/resources/assets/starwarsverse/particles/lightning_red.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "ForceKeybindWithIndex",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "force_keybind_with_index",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ForceKeybindWithIndexProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "buttonIndex",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Force/Structure/Keys"
+    },
+    {
+      "name": "XwingAircraft",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xwing_aircraft",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/entity/model/XwingAircraftModel.java",
+          "src/main/java/net/efkrdnz/starwarsverse/entity/XwingAircraftEntity.java",
+          "src/main/resources/assets/starwarsverse/models/item/xwing_aircraft_spawn_egg.json",
+          "src/main/java/net/efkrdnz/starwarsverse/client/renderer/XwingAircraftRenderer.java"
+        ]
+      },
+      "path": "~/Aircrafts/Xwing"
+    },
+    {
+      "name": "ClientGlowReturn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "client_glow_return",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ClientGlowReturnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Effects/ClientGlow"
+    },
+    {
+      "name": "GlientGlowEffect",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "glient_glow_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/potion/GlientGlowEffectMobEffect.java"
+        ]
+      },
+      "path": "~/Effects/ClientGlow"
+    },
+    {
+      "name": "ForceSenseEffect",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "force_sense_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/potion/ForceSenseEffectMobEffect.java"
+        ]
+      },
+      "path": "~/Effects/Force Sense"
+    },
+    {
+      "name": "DoesHaveForceSense",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "does_have_force_sense",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/DoesHaveForceSenseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Effects/Force Sense"
+    },
+    {
+      "name": "ForceSenseUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "force_sense_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ForceSenseUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "target",
+            "type": "entity"
+          },
+          {
+            "name": "charge",
+            "type": "number"
+          },
+          {
+            "name": "cost",
+            "type": "number"
+          },
+          {
+            "name": "max_charge",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Force/Powers/ForceSense"
+    },
+    {
+      "name": "VisualForceSense",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "visual_force_sense",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/VisualForceSenseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "partialTick",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Force/Structure/Visuals"
+    },
+    {
+      "name": "InitialTeamCreate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "initial_team_create",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/InitialTeamCreateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Teams"
+    },
+    {
+      "name": "AbilitySelectForceSense",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_force_sense",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/AbilitySelectForceSenseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Force/Structure/Gui"
+    },
+    {
+      "name": "XwingAircraftOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xwing_aircraft_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/XwingAircraftOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Aircrafts/Xwing"
+    },
+    {
+      "name": "ReturnRidingAircraft",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_riding_aircraft",
+      "metadata": {
+        "return_type": "entity",
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ReturnRidingAircraftProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Aircrafts/Controls"
+    },
+    {
+      "name": "ShipForward",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ship_forward",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/network/ShipForwardMessage.java"
+        ]
+      },
+      "path": "~/Aircrafts/Controls"
+    },
+    {
+      "name": "ShipLeft",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ship_left",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/network/ShipLeftMessage.java"
+        ]
+      },
+      "path": "~/Aircrafts/Controls"
+    },
+    {
+      "name": "ShipRight",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ship_right",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/network/ShipRightMessage.java"
+        ]
+      },
+      "path": "~/Aircrafts/Controls"
+    },
+    {
+      "name": "ShipBackward",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ship_backward",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/network/ShipBackwardMessage.java"
+        ]
+      },
+      "path": "~/Aircrafts/Controls"
+    },
+    {
+      "name": "ShipForwardOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ship_forward_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ShipForwardOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Aircrafts/Controls"
+    },
+    {
+      "name": "ShipForwardOnKeyReleased",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ship_forward_on_key_released",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ShipForwardOnKeyReleasedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Aircrafts/Controls"
+    },
+    {
+      "name": "ShipLeftOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ship_left_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ShipLeftOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Aircrafts/Controls"
+    },
+    {
+      "name": "ShipLeftOnKeyReleased",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ship_left_on_key_released",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ShipLeftOnKeyReleasedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Aircrafts/Controls"
+    },
+    {
+      "name": "ShipRightOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ship_right_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ShipRightOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Aircrafts/Controls"
+    },
+    {
+      "name": "ShipRightOnKeyReleased",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ship_right_on_key_released",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ShipRightOnKeyReleasedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Aircrafts/Controls"
+    },
+    {
+      "name": "ShipBackwardOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ship_backward_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ShipBackwardOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Aircrafts/Controls"
+    },
+    {
+      "name": "ShipBackwardOnKeyReleased",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ship_backward_on_key_released",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ShipBackwardOnKeyReleasedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Aircrafts/Controls"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "force_level",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "force_power",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "120.0"
+    },
+    {
+      "name": "max_force_power",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "100.0"
+    },
+    {
+      "name": "light_side_points",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "dark_side_points",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "skill_points",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "bound_power_1",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "bound_power_2",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "bound_power_3",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "gui_slot_index",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "is_using_force",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "current_charging_power",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
+    },
+    {
+      "name": "charge_timer",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "telekinesis_target_uuid",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
+    },
+    {
+      "name": "telekinesis_distance",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "is_using_telekinesis",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "force_indicator",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "true"
+    },
+    {
+      "name": "accumulated_throw_velocity_x",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "accumulated_throw_velocity_y",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "accumulated_throw_velocity_z",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "previous_look_direction_x",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "previous_look_direction_y",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "previous_look_direction_z",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "force_scroll_action",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
+    },
+    {
+      "name": "telekinesis_resume_timer",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "last_mouse_pitch",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "can_use_force",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "is_force_pushing",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "is_force_pulling",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "force_push_animation_progress",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "force_pull_animation_progress",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "is_using_lightning",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "ship_f",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "ship_l",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "ship_r",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "ship_b",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    }
+  ],
+  "sound_elements": [
+    {
+      "name": "lightsaber_open",
+      "files": [
+        "open"
+      ],
+      "category": "player",
+      "subtitle": "lightsaber open"
+    },
+    {
+      "name": "lightsaber_close",
+      "files": [
+        "close"
+      ],
+      "category": "player",
+      "subtitle": "lightsaber close"
+    },
+    {
+      "name": "hit1",
+      "files": [
+        "hit_1"
+      ],
+      "category": "player",
+      "subtitle": "hit"
+    },
+    {
+      "name": "hit2",
+      "files": [
+        "hit_2"
+      ],
+      "category": "player",
+      "subtitle": "hit"
+    },
+    {
+      "name": "lightsaber_ambient",
+      "files": [
+        "lightsaber_ambient"
+      ],
+      "category": "player",
+      "subtitle": "lightsaber ambient"
+    },
+    {
+      "name": "lightsaber_ambient_longer",
+      "files": [
+        "ambient"
+      ],
+      "category": "ambient",
+      "subtitle": "lightsaber ambient"
+    },
+    {
+      "name": "force_push",
+      "files": [
+        "force_push_2"
+      ],
+      "category": "neutral",
+      "subtitle": "force push sound"
+    },
+    {
+      "name": "force_charge",
+      "files": [
+        "force_charge2"
+      ],
+      "category": "neutral",
+      "subtitle": "force charge sound"
+    },
+    {
+      "name": "force_pull",
+      "files": [
+        "force_pull1"
+      ],
+      "category": "neutral",
+      "subtitle": "Force Pull Sound"
+    },
+    {
+      "name": "force_sense",
+      "files": [
+        "force_sense"
+      ],
+      "category": "neutral",
+      "subtitle": "force sense scan"
+    }
+  ],
+  "tag_elements": {
+    "DAMAGE_TYPES:minecraft:force": [
+      "CUSTOM:ForcePull",
+      "CUSTOM:ForcePush",
+      "CUSTOM:ForceLightning"
+    ],
+    "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:AircraftEngine",
+      "~CUSTOM:AircraftMainframe",
+      "~CUSTOM:SteelChasing"
+    ],
+    "BLOCKS:minecraft:replaceable": [
+      "~CUSTOM:LightsaberLightBlock"
+    ],
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:AircraftWorkbench",
+      "~CUSTOM:AircraftEngine",
+      "~CUSTOM:AircraftMainframe",
+      "~CUSTOM:SteelChasing"
+    ],
+    "BLOCKS:minecraft:needs_stone_tool": [
+      "~CUSTOM:AircraftWorkbench"
+    ],
+    "ENTITIES:mod:republic": [],
+    "ENTITIES:minecraft:sw_aircraft": [
+      "CUSTOM:XwingAircraft"
+    ],
+    "ENTITIES:mod:empire": [],
+    "ITEMS:minecraft:lightsaber": [
+      "CUSTOM:LightsaberAnakin",
+      "CUSTOM:LightsaberCountDooku"
+    ]
+  },
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "key.starwarsverse.ability_2": "Ability 2",
+      "block.starwarsverse.kyber_infuser": "Kyber Infuser",
+      "gui.starwarsverse.forcemenugui.button_force_hold": "Force Hold",
+      "key.starwarsverse.ability_3": "Ability 3",
+      "gui.starwarsverse.forcemenugui.button_force_pull": "Force Pull",
+      "biome.starwarsverse.space_biome": "Space Biome",
+      "death.attack.force_push": "%1$s pushed to death!",
+      "key.starwarsverse.ability_1": "Ability 1",
+      "death.attack.force_push.player": "%1$s died whilst trying to escape %2$s",
+      "item.starwarsverse.kyber_crystal_red": "Kyber Crystal Red",
+      "key.starwarsverse.ship_left": "Ship Left",
+      "subtitles.lightsaber_ambient_longer": "lightsaber ambient",
+      "death.attack.force_lightning.player": "%1$s died whilst trying to escape %2$s",
+      "item.starwarsverse.planet_earth_spawn_egg": "Planet Earth Spawn Egg",
+      "block.starwarsverse.aircraft_mainframe": "Aircraft Mainframe Block",
+      "effect.starwarsverse.glient_glow_effect": "Client Glow",
+      "effect.starwarsverse.force_sense_effect": "Force Sense",
+      "item.starwarsverse.kyber_crystal_green": "Kyber Crystal Green",
+      "entity.starwarsverse.planet_tatooine": "Planet Tatooine",
+      "subtitles.hit2": "hit",
+      "block.starwarsverse.steel_chasing": "Steel Chasing",
+      "key.starwarsverse.ship_forward": "Ship Forward",
+      "block.starwarsverse.aircraft_engine": "Aircraft Mainframe Block",
+      "subtitles.hit1": "hit",
+      "subtitles.lightsaber_ambient": "lightsaber ambient",
+      "item.starwarsverse.planet_tatooine_spawn_egg": "Planet Tatooine Spawn Egg",
+      "subtitles.ambient": "ambient",
+      "key.starwarsverse.ship_backward": "Ship Backward",
+      "subtitles.force_push": "force push sound",
+      "gui.starwarsverse.forcemenugui.button_force_push1": "Force Lightning",
+      "subtitles.lightsaber_open": "lightsaber open",
+      "item.starwarsverse.steel_ingot": "Steel Ingot",
+      "gui.starwarsverse.kyber_infuser_gui.label_for_kyber_infusion": "for Kyber infusion",
+      "item.starwarsverse.kyber_crystal_white": "Kyber Crystal White",
+      "item.starwarsverse.kyber_crystal_blue": "Kyber Crystal Blue",
+      "key.starwarsverse.ability_gui": "Ability GUI",
+      "gui.starwarsverse.kyber_infuser_gui.label_lightsaber_must_be": "Lightsaber must be turned off",
+      "subtitles.force_charge": "force charge sound",
+      "item.starwarsverse.kyber_crystal_black": "Kyber Crystal Black",
+      "death.attack.force_pull.player": "%1$s died whilst trying to escape %2$s",
+      "subtitles.lightsaber_close": "lightsaber close",
+      "item.starwarsverse.lightsaber_count_dooku": "Lightsaber Count Dooku",
+      "entity.starwarsverse.xwing_aircraft": "Xwing Aircraft",
+      "item.starwarsverse.kyber_crystal_yellow": "Kyber Crystal Yellow",
+      "death.attack.force_pull": "%1$s pulled to death!",
+      "death.attack.force_lightning.item": "%1$s zapped to death by %2$s",
+      "gui.starwarsverse.forcemenugui.button_2": "2",
+      "death.attack.force_push.item": "%1$s force pushed to death by %2$s",
+      "gui.starwarsverse.forcemenugui.button_1": "1",
+      "death.attack.force_pull.item": "%1$s force pulled to death by %2$s",
+      "gui.starwarsverse.forcemenugui.button_3": "3",
+      "effect.starwarsverse.screen_shake": "Screen Shake",
+      "subtitles.force_pull": "Force Pull Sound",
+      "item.starwarsverse.xwing_aircraft_spawn_egg": "Xwing Aircraft Spawn Egg",
+      "subtitles.force_sense": "force sense scan",
+      "block.starwarsverse.lightsaber_light_block": ".",
+      "entity.starwarsverse.planet_earth": "Planet Earth",
+      "key.starwarsverse.ship_right": "Ship Right",
+      "subtitles.lightsaber": "lightsaber",
+      "item.starwarsverse.kyber_crystal_purple": "Kyber Crystal Purple",
+      "gui.starwarsverse.forcemenugui.button_force_push": "Force Push",
+      "gui.starwarsverse.forcemenugui.button_force_sens": "Force Sense",
+      "death.attack.force_lightning": "%1$s zapped to death!",
+      "item.starwarsverse.kyber_crystal_orange": "Kyber Crystal Orange",
+      "item.starwarsverse.lightsaber_anakin": "Lightsaber Anakin",
+      "block.starwarsverse.aircraft_workbench": "Aircraft Workbench"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Space",
+        "children": [
+          {
+            "name": "Planets",
+            "children": [
+              {
+                "name": "Rendering",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Space",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Lightsabers",
+        "children": [
+          {
+            "name": "Functions",
+            "children": []
+          },
+          {
+            "name": "Items",
+            "children": [
+              {
+                "name": "Anakin",
+                "children": []
+              },
+              {
+                "name": "Count Dooku",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Blocks",
+        "children": [
+          {
+            "name": "KyberInfuser",
+            "children": [
+              {
+                "name": "Gui",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "AircraftWorkbench",
+            "children": []
+          },
+          {
+            "name": "SteelChasing",
+            "children": []
+          },
+          {
+            "name": "AirCraftMainframe",
+            "children": []
+          },
+          {
+            "name": "AircraftEngine",
+            "children": []
+          },
+          {
+            "name": "TemporaryLightBlock",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Items",
+        "children": [
+          {
+            "name": "Kyber Crystals",
+            "children": []
+          },
+          {
+            "name": "Steel",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Force",
+        "children": [
+          {
+            "name": "Powers",
+            "children": [
+              {
+                "name": "Force Push",
+                "children": []
+              },
+              {
+                "name": "Telekinesis",
+                "children": []
+              },
+              {
+                "name": "Force Pull",
+                "children": []
+              },
+              {
+                "name": "ForceLightning",
+                "children": []
+              },
+              {
+                "name": "ForceSense",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Structure",
+            "children": [
+              {
+                "name": "Keys",
+                "children": []
+              },
+              {
+                "name": "Gui",
+                "children": []
+              },
+              {
+                "name": "Visuals",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Overlay",
+        "children": [
+          {
+            "name": "Force Power",
+            "children": []
+          },
+          {
+            "name": "Force Charging",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "DamageTypes",
+        "children": []
+      },
+      {
+        "name": "Effects",
+        "children": [
+          {
+            "name": "ScreenShake",
+            "children": []
+          },
+          {
+            "name": "ClientGlow",
+            "children": []
+          },
+          {
+            "name": "Force Sense",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Game Rules",
+        "children": []
+      },
+      {
+        "name": "Command",
+        "children": [
+          {
+            "name": "User",
+            "children": [
+              {
+                "name": "AreaIndicator",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Admin",
+            "children": [
+              {
+                "name": "Player",
+                "children": [
+                  {
+                    "name": "Force",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Recipe",
+        "children": []
+      },
+      {
+        "name": "Mixin",
+        "children": []
+      },
+      {
+        "name": "Particles",
+        "children": []
+      },
+      {
+        "name": "Aircrafts",
+        "children": [
+          {
+            "name": "Xwing",
+            "children": []
+          },
+          {
+            "name": "Controls",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Teams",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "starwarsverse",
+    "modName": "starwarsverse",
+    "version": "1.0.0",
+    "author": "OEM, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "geckolib",
+      "playeranimator"
+    ],
+    "currentGenerator": "neoforge-1.21.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.efkrdnz.starwarsverse"
+  },
+  "mcreatorVersion": 202400342716
+}

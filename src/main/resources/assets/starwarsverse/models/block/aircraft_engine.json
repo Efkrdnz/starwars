@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "starwarsverse:block/aircraftengine",
+    "up": "starwarsverse:block/aircraftengine",
+    "north": "starwarsverse:block/aircraftengine",
+    "east": "starwarsverse:block/aircraftengine",
+    "south": "starwarsverse:block/aircraftengine",
+    "west": "starwarsverse:block/aircraftengine",
+    "particle": "starwarsverse:block/aircraftengine"
+  },
+  "render_type": "solid"
+}

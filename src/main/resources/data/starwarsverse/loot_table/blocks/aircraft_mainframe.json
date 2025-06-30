@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "starwarsverse:blocks/aircraft_mainframe",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "starwarsverse:aircraft_mainframe"
+        }
+      ]
+    }
+  ]
+}

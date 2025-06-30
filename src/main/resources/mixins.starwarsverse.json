@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "net.efkrdnz.starwarsverse.mixins",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ForceHandAnimationMixin",
+    "ForceOffhandRenderMixin",
+    "OffHandVisibilityMixin"
+  ],
+  "client": [],
+  "minVersion": "0.8"
+}

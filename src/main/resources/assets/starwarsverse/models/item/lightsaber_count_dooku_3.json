@@ -1,0 +1,7 @@
+{
+  "parent": "starwarsverse:custom/lightsabercountdookuyellow",
+  "textures": {
+    "1": "starwarsverse:block/lightsaber_count_dooku_yellow",
+    "particle": "starwarsverse:item/lightsaber_countdooku"
+  }
+}

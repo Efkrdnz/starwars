@@ -1,0 +1,127 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"force_push": {
+			"animation_length": 0.375,
+			"bones": {
+				"right_arm": {
+					"rotation": {
+						"0.0": {
+							"vector": [-84.99526, 2.49048, 0.21803]
+						},
+						"0.1667": {
+							"vector": [-96.39386, -7.51625, -4.43871],
+							"easing": "easeInOutQuad"
+						},
+						"0.375": {
+							"vector": [-96.39386, -7.51625, -4.43871],
+							"easing": "easeInOutQuad"
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, -3]
+						},
+						"0.1667": {
+							"vector": [0, 0, -9],
+							"easing": "easeInOutQuad"
+						},
+						"0.375": {
+							"vector": [0, 0, -9],
+							"easing": "easeInOutQuad"
+						}
+					}
+				}
+			}
+		},
+		"force_pull": {
+			"animation_length": 0.5,
+			"bones": {
+				"right_arm": {
+					"rotation": {
+						"0.0": {
+							"vector": [-96.39386, -7.51625, -4.43871],
+							"easing": "easeInOutQuad"
+						},
+						"0.125": {
+							"vector": [-96.39386, -7.51625, -4.43871],
+							"easing": "easeInOutQuad"
+						},
+						"0.3333": {
+							"vector": [-120.73831, -25.93169, 25.99512]
+						},
+						"0.5": {
+							"vector": [-120.73831, -25.93169, 25.99512]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, -9],
+							"easing": "easeInOutQuad"
+						},
+						"0.125": {
+							"vector": [0, 0, -9],
+							"easing": "easeInOutQuad"
+						},
+						"0.3333": {
+							"vector": [0, -1, -7]
+						},
+						"0.5": {
+							"vector": [0, 0, -9]
+						}
+					}
+				}
+			}
+		},
+		"force_hold": {
+			"loop": true,
+			"animation_length": 0.25,
+			"bones": {
+				"right_arm": {
+					"rotation": {
+						"vector": [-100, -7.5, 0]
+					},
+					"position": {
+						"vector": [1, -1, -5]
+					}
+				}
+			}
+		},
+		"cancel": {
+			"animation_length": 0.3333,
+			"bones": {
+				"torso": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"right_arm": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"left_arm": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"right_leg": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"left_leg": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

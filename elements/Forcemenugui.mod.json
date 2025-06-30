@@ -1,0 +1,148 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_1",
+          "text": "1",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Slotselect1"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 138,
+          "y": 171
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_2",
+          "text": "2",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Slotselect2"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 198,
+          "y": 171
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_3",
+          "text": "3",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Slotselect3"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 258,
+          "y": 171
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_force_push",
+          "text": "Force Push",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectForcePush"
+          },
+          "width": 77,
+          "height": 20,
+          "x": 136,
+          "y": 45
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_force_hold",
+          "text": "Force Hold",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectForceHold"
+          },
+          "width": 77,
+          "height": 20,
+          "x": 136,
+          "y": 69
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_force_pull",
+          "text": "Force Pull",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectForcePull"
+          },
+          "width": 77,
+          "height": 20,
+          "x": 216,
+          "y": 45
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_force_push1",
+          "text": "Force Lightning",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectForceLightning"
+          },
+          "width": 77,
+          "height": 20,
+          "x": 216,
+          "y": 69
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_force_sens",
+          "text": "Force Sense",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectForceSense"
+          },
+          "width": 77,
+          "height": 20,
+          "x": 136,
+          "y": 93
+        }
+      }
+    ],
+    "onOpen": {
+      "name": "ForcemenuguiThisGUIIsClosed"
+    },
+    "onClosed": {
+      "name": "ForcemenuguiThisGUIIsClosed"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

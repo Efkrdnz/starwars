@@ -1,0 +1,57 @@
+{
+  "parent": "starwarsverse:custom/lightsabercountdookubase",
+  "textures": {
+    "1": "starwarsverse:block/lightsaber_count_dooku_black",
+    "particle": "starwarsverse:item/lightsaber_countdooku"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "starwarsverse:lightsaber_count_dooku_color": 1
+      },
+      "model": "starwarsverse:item/lightsaber_count_dooku_0"
+    },
+    {
+      "predicate": {
+        "starwarsverse:lightsaber_count_dooku_color": 2
+      },
+      "model": "starwarsverse:item/lightsaber_count_dooku_1"
+    },
+    {
+      "predicate": {
+        "starwarsverse:lightsaber_count_dooku_color": 3
+      },
+      "model": "starwarsverse:item/lightsaber_count_dooku_2"
+    },
+    {
+      "predicate": {
+        "starwarsverse:lightsaber_count_dooku_color": 4
+      },
+      "model": "starwarsverse:item/lightsaber_count_dooku_3"
+    },
+    {
+      "predicate": {
+        "starwarsverse:lightsaber_count_dooku_color": 5
+      },
+      "model": "starwarsverse:item/lightsaber_count_dooku_4"
+    },
+    {
+      "predicate": {
+        "starwarsverse:lightsaber_count_dooku_color": 6
+      },
+      "model": "starwarsverse:item/lightsaber_count_dooku_5"
+    },
+    {
+      "predicate": {
+        "starwarsverse:lightsaber_count_dooku_color": 7
+      },
+      "model": "starwarsverse:item/lightsaber_count_dooku_6"
+    },
+    {
+      "predicate": {
+        "starwarsverse:lightsaber_count_dooku_color": 8
+      },
+      "model": "starwarsverse:item/lightsaber_count_dooku_7"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "starwarsverse:block/kyberinfuser",
+    "up": "starwarsverse:block/kyberinfuser",
+    "north": "starwarsverse:block/kyberinfuser",
+    "east": "starwarsverse:block/kyberinfuser",
+    "south": "starwarsverse:block/kyberinfuser",
+    "west": "starwarsverse:block/kyberinfuser",
+    "particle": "starwarsverse:block/kyberinfuser"
+  },
+  "render_type": "solid"
+}

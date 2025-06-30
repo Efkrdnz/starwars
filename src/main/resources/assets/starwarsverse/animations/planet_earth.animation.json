@@ -1,0 +1,22 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"idle": {
+			"loop": true,
+			"animation_length": 80,
+			"bones": {
+				"planet": {
+					"rotation": {
+						"0.0": {
+							"vector": [-12.26758, 2.15393, 12.31594]
+						},
+						"80.0": {
+							"vector": [-12.27, -357.85, 12.32]
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

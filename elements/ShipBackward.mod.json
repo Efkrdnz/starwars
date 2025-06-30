@@ -1,0 +1,15 @@
+{
+  "_fv": 69,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "S",
+    "keyBindingName": "Ship Backward",
+    "keyBindingCategoryKey": "starwars",
+    "onKeyPressed": {
+      "name": "ShipBackwardOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "ShipBackwardOnKeyReleased"
+    }
+  }
+}

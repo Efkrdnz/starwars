@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "starwarsverse:force_pull",
+    "starwarsverse:force_push",
+    "starwarsverse:force_lightning"
+  ]
+}

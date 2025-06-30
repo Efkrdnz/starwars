@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "lightsaber_count_dooku_green"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "starwarsverse:block/aircraftmainframe",
+    "up": "starwarsverse:block/aircraftmainframe",
+    "north": "starwarsverse:block/aircraftmainframe",
+    "east": "starwarsverse:block/aircraftmainframe",
+    "south": "starwarsverse:block/aircraftmainframe",
+    "west": "starwarsverse:block/aircraftmainframe",
+    "particle": "starwarsverse:block/aircraftmainframe"
+  },
+  "render_type": "solid"
+}

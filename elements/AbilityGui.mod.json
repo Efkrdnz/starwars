@@ -1,0 +1,12 @@
+{
+  "_fv": 69,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "V",
+    "keyBindingName": "Ability GUI",
+    "keyBindingCategoryKey": "starwars",
+    "onKeyPressed": {
+      "name": "AbilityGuiOnKeyPressed"
+    }
+  }
+}

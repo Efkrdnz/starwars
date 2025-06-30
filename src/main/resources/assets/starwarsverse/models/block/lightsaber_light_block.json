@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "starwarsverse:block/blank",
+    "particle": "starwarsverse:block/blank"
+  },
+  "render_type": "translucent"
+}

@@ -1,0 +1,15 @@
+{
+  "_fv": 69,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "D",
+    "keyBindingName": "Ship Right",
+    "keyBindingCategoryKey": "starwars",
+    "onKeyPressed": {
+      "name": "ShipRightOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "ShipRightOnKeyReleased"
+    }
+  }
+}

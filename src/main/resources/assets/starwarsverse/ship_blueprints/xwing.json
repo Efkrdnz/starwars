@@ -1,0 +1,416 @@
+{
+  "name": "X-Wing Starfighter",
+  "entity_type": "starwarsverse:xwing_vehicle",
+  "category": "fighter",
+  "difficulty": "medium",
+  "build_time_estimate": "8-12 minutes",
+  "spawn_offset": {
+    "x": 0,
+    "y": 3,
+    "z": 0
+  },
+  "blocks": [
+    {
+      "position": {"x": 8, "y": 0, "z": 0},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Starboard upper wing tip"
+    },
+    {
+      "position": {"x": 9, "y": 0, "z": 0},
+      "block": "starwarsverse:aircraft_engine",
+      "required": true,
+      "description": "Starboard upper engine"
+    },
+    {
+      "position": {"x": 7, "y": 0, "z": 1},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Starboard upper wing"
+    },
+    {
+      "position": {"x": 8, "y": 0, "z": 1},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Starboard upper wing"
+    },
+    {
+      "position": {"x": 1, "y": 0, "z": 2},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Port upper wing"
+    },
+    {
+      "position": {"x": 2, "y": 0, "z": 2},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Port upper wing"
+    },
+    {
+      "position": {"x": 3, "y": 0, "z": 2},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Port upper wing"
+    },
+    {
+      "position": {"x": 4, "y": 0, "z": 2},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Port upper wing"
+    },
+    {
+      "position": {"x": 5, "y": 0, "z": 2},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Port upper wing"
+    },
+    {
+      "position": {"x": 6, "y": 0, "z": 2},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Port upper wing"
+    },
+    {
+      "position": {"x": 7, "y": 0, "z": 2},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Port upper wing"
+    },
+    {
+      "position": {"x": 8, "y": 0, "z": 2},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Port upper wing"
+    },
+    {
+      "position": {"x": 0, "y": 0, "z": 3},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Port upper wing section"
+    },
+    {
+      "position": {"x": 1, "y": 0, "z": 3},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Port upper wing section"
+    },
+    {
+      "position": {"x": 2, "y": 0, "z": 3},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Port upper wing section"
+    },
+    {
+      "position": {"x": 3, "y": 0, "z": 3},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Port upper wing section"
+    },
+    {
+      "position": {"x": 4, "y": 0, "z": 3},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Main fuselage"
+    },
+    {
+      "position": {"x": 5, "y": 0, "z": 3},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Main fuselage"
+    },
+    {
+      "position": {"x": 6, "y": 0, "z": 3},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Starboard upper wing section"
+    },
+    {
+      "position": {"x": 7, "y": 0, "z": 3},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Starboard upper wing section"
+    },
+    {
+      "position": {"x": 8, "y": 0, "z": 3},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Starboard upper wing section"
+    },
+    {
+      "position": {"x": 9, "y": 0, "z": 3},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Starboard upper wing section"
+    },
+    {
+      "position": {"x": 1, "y": 0, "z": 4},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Port upper wing"
+    },
+    {
+      "position": {"x": 2, "y": 0, "z": 4},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Port upper wing"
+    },
+    {
+      "position": {"x": 3, "y": 0, "z": 4},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Port upper wing"
+    },
+    {
+      "position": {"x": 4, "y": 0, "z": 4},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Port upper wing"
+    },
+    {
+      "position": {"x": 5, "y": 0, "z": 4},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Port upper wing"
+    },
+    {
+      "position": {"x": 6, "y": 0, "z": 4},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Port upper wing"
+    },
+    {
+      "position": {"x": 7, "y": 0, "z": 4},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Port upper wing"
+    },
+    {
+      "position": {"x": 8, "y": 0, "z": 4},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Port upper wing"
+    },
+    {
+      "position": {"x": 7, "y": 0, "z": 5},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Starboard lower wing"
+    },
+    {
+      "position": {"x": 8, "y": 0, "z": 5},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Starboard lower wing"
+    },
+    {
+      "position": {"x": 8, "y": 0, "z": 6},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Starboard lower wing tip"
+    },
+    {
+      "position": {"x": 9, "y": 0, "z": 6},
+      "block": "starwarsverse:aircraft_engine",
+      "required": true,
+      "description": "Starboard lower engine"
+    },
+    {
+      "position": {"x": 7, "y": 1, "z": 1},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Upper fuselage section"
+    },
+    {
+      "position": {"x": 4, "y": 1, "z": 2},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Upper fuselage section"
+    },
+    {
+      "position": {"x": 5, "y": 1, "z": 2},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Upper fuselage section"
+    },
+    {
+      "position": {"x": 6, "y": 1, "z": 2},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Upper fuselage section"
+    },
+    {
+      "position": {"x": 7, "y": 1, "z": 2},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Upper fuselage section"
+    },
+    {
+      "position": {"x": 2, "y": 1, "z": 3},
+      "block": "starwarsverse:reinforced_glass",
+      "required": true,
+      "description": "Cockpit canopy left"
+    },
+    {
+      "position": {"x": 3, "y": 1, "z": 3},
+      "block": "starwarsverse:reinforced_glass",
+      "required": true,
+      "description": "Cockpit canopy center"
+    },
+    {
+      "position": {"x": 4, "y": 1, "z": 3},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Upper fuselage center"
+    },
+    {
+      "position": {"x": 5, "y": 1, "z": 3},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Upper fuselage center"
+    },
+    {
+      "position": {"x": 6, "y": 1, "z": 3},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Upper fuselage center"
+    },
+    {
+      "position": {"x": 7, "y": 1, "z": 3},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Upper fuselage center"
+    },
+    {
+      "position": {"x": 4, "y": 1, "z": 4},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Upper fuselage rear"
+    },
+    {
+      "position": {"x": 5, "y": 1, "z": 4},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Upper fuselage rear"
+    },
+    {
+      "position": {"x": 6, "y": 1, "z": 4},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Upper fuselage rear"
+    },
+    {
+      "position": {"x": 7, "y": 1, "z": 4},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Upper fuselage rear"
+    },
+    {
+      "position": {"x": 7, "y": 1, "z": 5},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Upper fuselage tail"
+    },
+    {
+      "position": {"x": 8, "y": 2, "z": 0},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Top wing tip"
+    },
+    {
+      "position": {"x": 9, "y": 2, "z": 0},
+      "block": "starwarsverse:aircraft_engine",
+      "required": true,
+      "description": "Top starboard engine"
+    },
+    {
+      "position": {"x": 7, "y": 2, "z": 1},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Top wing section"
+    },
+    {
+      "position": {"x": 8, "y": 2, "z": 1},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Top wing section"
+    },
+    {
+      "position": {"x": 7, "y": 2, "z": 2},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Top fuselage section"
+    },
+    {
+      "position": {"x": 4, "y": 2, "z": 3},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Top fuselage center"
+    },
+    {
+      "position": {"x": 5, "y": 2, "z": 3},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Top fuselage center"
+    },
+    {
+      "position": {"x": 6, "y": 2, "z": 3},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Top fuselage center"
+    },
+    {
+      "position": {"x": 7, "y": 2, "z": 3},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Top fuselage center"
+    },
+    {
+      "position": {"x": 7, "y": 2, "z": 4},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Top fuselage rear"
+    },
+    {
+      "position": {"x": 7, "y": 2, "z": 5},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Top wing section"
+    },
+    {
+      "position": {"x": 8, "y": 2, "z": 5},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Top wing section"
+    },
+    {
+      "position": {"x": 8, "y": 2, "z": 6},
+      "block": "starwarsverse:steel_chasing",
+      "required": true,
+      "description": "Top wing tip"
+    },
+    {
+      "position": {"x": 9, "y": 2, "z": 6},
+      "block": "starwarsverse:aircraft_engine",
+      "required": true,
+      "description": "Top port engine"
+    },
+    {
+      "position": {"x": 4, "y": 1, "z": 3},
+      "block": "starwarsverse:aircraft_mainframe",
+      "required": true,
+      "description": "Main structural frame - Core component"
+    }
+  ],
+  "materials_summary": {
+    "starwarsverse:steel_chasing": 52,
+    "starwarsverse:aircraft_engine": 4,
+    "starwarsverse:aircraft_mainframe": 1,
+    "starwarsverse:reinforced_glass": 2
+  },
+  "display_item": "starwarsverse:steel_chasing",
+  "unlock_requirements": {
+    "research_level": 1,
+    "prerequisite_ships": [],
+    "required_items": []
+  }
+}

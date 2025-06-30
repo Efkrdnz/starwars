@@ -1,0 +1,15 @@
+{
+  "_fv": 69,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "X",
+    "keyBindingName": "Ability 2",
+    "keyBindingCategoryKey": "starwars",
+    "onKeyPressed": {
+      "name": "Ability2OnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "Ability1OnKeyReleased"
+    }
+  }
+}

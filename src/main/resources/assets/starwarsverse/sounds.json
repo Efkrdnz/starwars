@@ -1,0 +1,92 @@
+{
+  "lightsaber_open": {
+    "subtitle": "subtitles.lightsaber_open",
+    "sounds": [
+      {
+        "name": "starwarsverse:open",
+        "stream": false
+      }
+    ]
+  },
+  "lightsaber_close": {
+    "subtitle": "subtitles.lightsaber_close",
+    "sounds": [
+      {
+        "name": "starwarsverse:close",
+        "stream": false
+      }
+    ]
+  },
+  "hit1": {
+    "subtitle": "subtitles.hit1",
+    "sounds": [
+      {
+        "name": "starwarsverse:hit_1",
+        "stream": false
+      }
+    ]
+  },
+  "hit2": {
+    "subtitle": "subtitles.hit2",
+    "sounds": [
+      {
+        "name": "starwarsverse:hit_2",
+        "stream": false
+      }
+    ]
+  },
+  "lightsaber_ambient": {
+    "subtitle": "subtitles.lightsaber_ambient",
+    "sounds": [
+      {
+        "name": "starwarsverse:lightsaber_ambient",
+        "stream": false
+      }
+    ]
+  },
+  "lightsaber_ambient_longer": {
+    "subtitle": "subtitles.lightsaber_ambient_longer",
+    "sounds": [
+      {
+        "name": "starwarsverse:ambient",
+        "stream": false
+      }
+    ]
+  },
+  "force_push": {
+    "subtitle": "subtitles.force_push",
+    "sounds": [
+      {
+        "name": "starwarsverse:force_push_2",
+        "stream": false
+      }
+    ]
+  },
+  "force_charge": {
+    "subtitle": "subtitles.force_charge",
+    "sounds": [
+      {
+        "name": "starwarsverse:force_charge2",
+        "stream": false
+      }
+    ]
+  },
+  "force_pull": {
+    "subtitle": "subtitles.force_pull",
+    "sounds": [
+      {
+        "name": "starwarsverse:force_pull1",
+        "stream": false
+      }
+    ]
+  },
+  "force_sense": {
+    "subtitle": "subtitles.force_sense",
+    "sounds": [
+      {
+        "name": "starwarsverse:force_sense",
+        "stream": false
+      }
+    ]
+  }
+}

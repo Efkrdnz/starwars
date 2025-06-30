@@ -1,0 +1,15 @@
+{
+  "_fv": 69,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "W",
+    "keyBindingName": "Ship Forward",
+    "keyBindingCategoryKey": "starwars",
+    "onKeyPressed": {
+      "name": "ShipForwardOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "ShipForwardOnKeyReleased"
+    }
+  }
+}

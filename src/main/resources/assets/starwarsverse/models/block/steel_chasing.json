@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "starwarsverse:block/iron_chasing",
+    "up": "starwarsverse:block/iron_chasing",
+    "north": "starwarsverse:block/iron_chasing",
+    "east": "starwarsverse:block/iron_chasing",
+    "south": "starwarsverse:block/iron_chasing",
+    "west": "starwarsverse:block/iron_chasing",
+    "particle": "starwarsverse:block/iron_chasing"
+  },
+  "render_type": "solid"
+}
