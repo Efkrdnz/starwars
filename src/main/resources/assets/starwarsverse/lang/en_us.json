@@ -44,6 +44,7 @@
   "entity.starwarsverse.xwing_aircraft": "Xwing Aircraft",
   "item.starwarsverse.kyber_crystal_yellow": "Kyber Crystal Yellow",
   "death.attack.force_pull": "%1$s pulled to death!",
+  "gui.starwarsverse.ship_control.button_empty": "",
   "death.attack.force_lightning.item": "%1$s zapped to death by %2$s",
   "gui.starwarsverse.forcemenugui.button_2": "2",
   "death.attack.force_push.item": "%1$s force pushed to death by %2$s",

@@ -2836,11 +2836,9 @@
     "BLOCKS:minecraft:needs_stone_tool": [
       "~CUSTOM:AircraftWorkbench"
     ],
-    "ENTITIES:mod:republic": [],
     "ENTITIES:minecraft:sw_aircraft": [
       "CUSTOM:XwingAircraft"
     ],
-    "ENTITIES:mod:empire": [],
     "ITEMS:minecraft:lightsaber": [
       "CUSTOM:LightsaberAnakin",
       "CUSTOM:LightsaberCountDooku"
@@ -2894,6 +2892,7 @@
       "entity.starwarsverse.xwing_aircraft": "Xwing Aircraft",
       "item.starwarsverse.kyber_crystal_yellow": "Kyber Crystal Yellow",
       "death.attack.force_pull": "%1$s pulled to death!",
+      "gui.starwarsverse.ship_control.button_empty": "",
       "death.attack.force_lightning.item": "%1$s zapped to death by %2$s",
       "gui.starwarsverse.forcemenugui.button_2": "2",
       "death.attack.force_push.item": "%1$s force pushed to death by %2$s",
@@ -3141,7 +3140,12 @@
           },
           {
             "name": "Controls",
-            "children": []
+            "children": [
+              {
+                "name": "GUI",
+                "children": []
+              }
+            ]
           }
         ]
       },
