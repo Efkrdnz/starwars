@@ -2083,7 +2083,7 @@
       "name": "XwingAircraft",
       "type": "animatedentity",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "xwing_aircraft",
       "metadata": {
         "files": [

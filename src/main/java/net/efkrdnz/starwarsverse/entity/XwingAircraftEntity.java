@@ -41,6 +41,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
 import net.efkrdnz.starwarsverse.procedures.XwingAircraftOnEntityTickUpdateProcedure;
+import net.efkrdnz.starwarsverse.network.StarwarsverseModVariables;
 
 public class XwingAircraftEntity extends PathfinderMob implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(XwingAircraftEntity.class, EntityDataSerializers.BOOLEAN);
@@ -84,7 +85,6 @@ public class XwingAircraftEntity extends PathfinderMob implements GeoEntity {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-
 	}
 
 	@Override
@@ -160,6 +160,122 @@ public class XwingAircraftEntity extends PathfinderMob implements GeoEntity {
 		super.aiStep();
 		this.updateSwingTime();
 		this.setNoGravity(true);
+		// Enhanced flight controls - call our custom method
+		handleDirectFlightControls();
+	}
+
+	// Add this new method to XwingAircraftEntity.java
+	private void handleDirectFlightControls() {
+		Entity driver = this.getControllingPassenger();
+		if (driver == null) {
+			// No pilot - gentle descent and auto-level
+			Vec3 currentVel = this.getDeltaMovement();
+			double drag = 0.85;
+			double gravityEffect = -0.05;
+			this.setDeltaMovement(new Vec3(currentVel.x * drag, Math.max(currentVel.y + gravityEffect, -0.5), currentVel.z * drag));
+			// Auto-level
+			float currentPitch = this.getXRot();
+			if (Math.abs(currentPitch) > 1.0f) {
+				this.setXRot(currentPitch * 0.95f);
+			}
+			this.setAnimation("idle_1");
+			return;
+		}
+		this.setAnimation("idle_2");
+		// Get control inputs directly from player variables
+		if (!(driver instanceof Player player))
+			return;
+		StarwarsverseModVariables.PlayerVariables vars = player.getData(StarwarsverseModVariables.PLAYER_VARIABLES);
+		boolean forward = vars.ship_f;
+		boolean backward = vars.ship_b;
+		boolean left = vars.ship_l;
+		boolean right = vars.ship_r;
+		// Apply enhanced flight physics
+		applyEnhancedFlightPhysics(player, forward, backward, left, right);
+	}
+
+	// Add this method to XwingAircraftEntity.java
+	private void applyEnhancedFlightPhysics(Player pilot, boolean forward, boolean backward, boolean left, boolean right) {
+		Vec3 currentVel = this.getDeltaMovement();
+		Vec3 lookDirection = pilot.getLookAngle();
+		// Flight parameters
+		double maxSpeed = 2.5;
+		double acceleration = 0.15;
+		double deceleration = 0.92;
+		// Calculate desired velocity
+		Vec3 desiredVel = Vec3.ZERO;
+		// Forward/backward movement
+		if (forward && !backward) {
+			desiredVel = lookDirection.scale(maxSpeed);
+		} else if (backward && !forward) {
+			desiredVel = lookDirection.scale(-maxSpeed * 0.6);
+		}
+		// Strafe movement
+		if (left || right) {
+			Vec3 rightVector = lookDirection.cross(new Vec3(0, 1, 0)).normalize();
+			Vec3 strafeVel = Vec3.ZERO;
+			if (left && !right) {
+				strafeVel = rightVector.scale(-maxSpeed * 0.7);
+			} else if (right && !left) {
+				strafeVel = rightVector.scale(maxSpeed * 0.7);
+			}
+			if (forward || backward) {
+				desiredVel = desiredVel.add(strafeVel.scale(0.5));
+			} else {
+				desiredVel = strafeVel;
+			}
+		}
+		// Smooth velocity transition
+		Vec3 velDiff = desiredVel.subtract(currentVel);
+		double diffLength = velDiff.length();
+		if (diffLength > 0.01) {
+			double rate = (desiredVel.length() > currentVel.length()) ? acceleration : acceleration * 1.5;
+			double maxChange = rate;
+			if (diffLength > maxChange) {
+				velDiff = velDiff.normalize().scale(maxChange);
+			}
+			Vec3 newVel = currentVel.add(velDiff);
+			if (desiredVel.length() < 0.1) {
+				newVel = newVel.scale(deceleration);
+			}
+			// Apply banking physics
+			if (left && !right) {
+				newVel = newVel.add(new Vec3(-0.02 * newVel.length(), -0.006 * newVel.length(), 0));
+			} else if (right && !left) {
+				newVel = newVel.add(new Vec3(0.02 * newVel.length(), -0.006 * newVel.length(), 0));
+			}
+			// Apply atmospheric effects
+			double altitude = this.getY();
+			double atmosphericDensity = Math.max(0.3, 1.0 - (altitude - 64) / 200.0);
+			double windResistance = Math.min(0.98, 0.85 + (0.13 * atmosphericDensity));
+			if (newVel.length() < 0.1) {
+				windResistance = 0.99;
+			}
+			newVel = newVel.scale(windResistance);
+			this.setDeltaMovement(newVel);
+		}
+		// Handle ship rotation
+		handleShipRotation(pilot, left, right, forward, backward);
+	}
+
+	// Add this method to XwingAircraftEntity.java  
+	private void handleShipRotation(Player pilot, boolean left, boolean right, boolean forward, boolean backward) {
+		Vec3 lookDirection = pilot.getLookAngle();
+		double targetYaw = Math.toDegrees(Math.atan2(-lookDirection.x, lookDirection.z));
+		double targetPitch = Math.toDegrees(Math.asin(-lookDirection.y));
+		double currentYaw = this.getYRot();
+		double currentPitch = this.getXRot();
+		double yawDiff = net.minecraft.util.Mth.wrapDegrees(targetYaw - currentYaw);
+		double pitchDiff = net.minecraft.util.Mth.wrapDegrees(targetPitch - currentPitch);
+		double rotationSpeed = (forward || backward) ? 0.3 : 0.15;
+		this.setYRot((float) (currentYaw + yawDiff * rotationSpeed));
+		this.setXRot((float) (currentPitch + pitchDiff * rotationSpeed));
+		// Banking effect through pitch adjustment
+		if (left && !right) {
+			this.setXRot(this.getXRot() - 1.0f);
+		} else if (right && !left) {
+			this.setXRot(this.getXRot() - 1.0f);
+		}
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {
