@@ -2511,6 +2511,25 @@
         ]
       },
       "path": "~/Aircrafts/Xwing"
+    },
+    {
+      "name": "XwingAircraftTickRotation",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xwing_aircraft_tick_rotation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/XwingAircraftTickRotationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Aircrafts/Xwing"
     }
   ],
   "variable_elements": [
@@ -3143,6 +3162,10 @@
             "children": [
               {
                 "name": "GUI",
+                "children": []
+              },
+              {
+                "name": "Visuals",
                 "children": []
               }
             ]
