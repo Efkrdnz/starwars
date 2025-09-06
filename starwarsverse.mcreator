@@ -2608,7 +2608,7 @@
       "name": "LightsaberSwing",
       "type": "procedure",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "lightsaber_swing",
       "metadata": {
         "files": [
@@ -2638,6 +2638,65 @@
           "src/main/java/net/efkrdnz/starwarsverse/mixins/SwingCancelMixin.java"
         ]
       }
+    },
+    {
+      "name": "LightsaberPatternReset",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "lightsaber_pattern_reset",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/LightsaberPatternResetProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Lightsabers/Functions"
+    },
+    {
+      "name": "LightsaberSwingWithTiming",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "lightsaber_swing_with_timing",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/LightsaberSwingWithTimingProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Lightsabers/Functions"
+    },
+    {
+      "name": "GuardProjectilenonparry",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "guard_projectilenonparry",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/GuardProjectilenonparryProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightsabers/Functions/Guard"
     }
   ],
   "variable_elements": [
@@ -2865,6 +2924,12 @@
     },
     {
       "name": "lightsaber_attack_pattern",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "lightsaber_last_attack_time",
       "type": "number",
       "scope": "player_lifetime",
       "value": "0"

@@ -99,6 +99,7 @@ public class StarwarsverseModVariables {
 				clone.ship_b = original.ship_b;
 				clone.guard = original.guard;
 				clone.lightsaber_attack_pattern = original.lightsaber_attack_pattern;
+				clone.lightsaber_last_attack_time = original.lightsaber_last_attack_time;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -143,6 +144,7 @@ public class StarwarsverseModVariables {
 		public boolean ship_b = false;
 		public double guard = 0;
 		public double lightsaber_attack_pattern = 0;
+		public double lightsaber_last_attack_time = 0;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -185,6 +187,7 @@ public class StarwarsverseModVariables {
 			nbt.putBoolean("ship_b", ship_b);
 			nbt.putDouble("guard", guard);
 			nbt.putDouble("lightsaber_attack_pattern", lightsaber_attack_pattern);
+			nbt.putDouble("lightsaber_last_attack_time", lightsaber_last_attack_time);
 			return nbt;
 		}
 
@@ -228,6 +231,7 @@ public class StarwarsverseModVariables {
 			ship_b = nbt.getBoolean("ship_b");
 			guard = nbt.getDouble("guard");
 			lightsaber_attack_pattern = nbt.getDouble("lightsaber_attack_pattern");
+			lightsaber_last_attack_time = nbt.getDouble("lightsaber_last_attack_time");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

@@ -11,11 +11,19 @@ import net.efkrdnz.starwarsverse.network.StarwarsverseModVariables;
 
 import dev.kosmx.playerAnim.api.AnimUtils;
 
-public class LightsaberSwingProcedure {
+public class LightsaberSwingWithTimingProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		int currentPattern = (int) entity.getData(StarwarsverseModVariables.PLAYER_VARIABLES).lightsaber_attack_pattern;
+		StarwarsverseModVariables.PlayerVariables vars = entity.getData(StarwarsverseModVariables.PLAYER_VARIABLES);
+		long currentTime = System.currentTimeMillis();
+		// reset pattern if more than 2 seconds have passed since last attack
+		if (currentTime - vars.lightsaber_last_attack_time > 2000) {
+			vars.lightsaber_attack_pattern = 0;
+		}
+		// update last attack time
+		vars.lightsaber_last_attack_time = currentTime;
+		int currentPattern = (int) vars.lightsaber_attack_pattern;
 		// cycle through attack patterns
 		if (currentPattern == 0) {
 			setAttackPattern(entity, 1, "attack1", world);
