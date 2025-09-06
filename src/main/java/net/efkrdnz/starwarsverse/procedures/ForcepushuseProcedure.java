@@ -49,9 +49,9 @@ public class ForcepushuseProcedure {
 				for (Entity entityiterator : _entfound) {
 					if (!(entityiterator == force_user) && entityiterator instanceof LivingEntity) {
 						entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("starwarsverse:force_push"))), force_user),
-								(float) (4 * (current_charge / maxcharge) + force_user.getData(StarwarsverseModVariables.PLAYER_VARIABLES).force_level / 25));
-						entityiterator.setDeltaMovement(new Vec3((6 * (current_charge / maxcharge) * (force_user.getData(StarwarsverseModVariables.PLAYER_VARIABLES).force_level / 10) * force_user.getLookAngle().x), 0.5,
-								(6 * (current_charge / maxcharge) * (force_user.getData(StarwarsverseModVariables.PLAYER_VARIABLES).force_level / 10) * force_user.getLookAngle().z)));
+								(float) (4 * (current_charge / maxcharge) + force_user.getData(StarwarsverseModVariables.PLAYER_VARIABLES).force_level / 4));
+						entityiterator.setDeltaMovement(new Vec3((5 * (current_charge / maxcharge) * (force_user.getData(StarwarsverseModVariables.PLAYER_VARIABLES).force_level / 5) * force_user.getLookAngle().x), 0.5,
+								(5 * (current_charge / maxcharge) * (force_user.getData(StarwarsverseModVariables.PLAYER_VARIABLES).force_level / 5) * force_user.getLookAngle().z)));
 					}
 				}
 			}

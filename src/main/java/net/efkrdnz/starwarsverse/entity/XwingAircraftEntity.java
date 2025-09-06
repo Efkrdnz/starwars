@@ -95,7 +95,7 @@ public class XwingAircraftEntity extends PathfinderMob implements GeoEntity {
 
 	@Override
 	protected Vec3 getPassengerAttachmentPoint(Entity entity, EntityDimensions dimensions, float f) {
-		return super.getPassengerAttachmentPoint(entity, dimensions, f).add(0, 1f, 0);
+		return super.getPassengerAttachmentPoint(entity, dimensions, f).add(0, -2f, 0);
 	}
 
 	@Override

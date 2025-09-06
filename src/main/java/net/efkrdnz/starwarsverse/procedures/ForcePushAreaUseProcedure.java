@@ -49,11 +49,11 @@ public class ForcePushAreaUseProcedure {
 					if (!(entityiterator == force_user) && entityiterator instanceof LivingEntity) {
 						if (!entityiterator.getPersistentData().getBoolean("blocking")) {
 							entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("starwarsverse:force_push"))), force_user),
-									(float) (4 * (current_charge / maxcharge) + force_user.getData(StarwarsverseModVariables.PLAYER_VARIABLES).force_level / 25));
+									(float) (3 * (current_charge / maxcharge) + force_user.getData(StarwarsverseModVariables.PLAYER_VARIABLES).force_level / 5));
 							entityiterator.setDeltaMovement(new Vec3(
-									((entityiterator.getX() - force_user.getX()) * ((4 * (current_charge / maxcharge) * (force_user.getData(StarwarsverseModVariables.PLAYER_VARIABLES).force_level / 15))
+									((entityiterator.getX() - force_user.getX()) * ((5 * (current_charge / maxcharge) * (force_user.getData(StarwarsverseModVariables.PLAYER_VARIABLES).force_level / 5))
 											/ Math.sqrt(Math.pow(entityiterator.getX() - entity.getX(), 2) + Math.pow(entityiterator.getY() - entity.getY(), 2) + Math.pow(entityiterator.getZ() - entity.getZ(), 2)))),
-									0.5, ((entityiterator.getZ() - force_user.getZ()) * ((4 * (current_charge / maxcharge) * (force_user.getData(StarwarsverseModVariables.PLAYER_VARIABLES).force_level / 15))
+									0.5, ((entityiterator.getZ() - force_user.getZ()) * ((5 * (current_charge / maxcharge) * (force_user.getData(StarwarsverseModVariables.PLAYER_VARIABLES).force_level / 5))
 											/ Math.sqrt(Math.pow(entityiterator.getX() - entity.getX(), 2) + Math.pow(entityiterator.getY() - entity.getY(), 2) + Math.pow(entityiterator.getZ() - entity.getZ(), 2))))));
 						}
 					}

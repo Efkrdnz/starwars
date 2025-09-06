@@ -2083,7 +2083,7 @@
       "name": "XwingAircraft",
       "type": "animatedentity",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "xwing_aircraft",
       "metadata": {
         "files": [
@@ -2497,7 +2497,7 @@
       "name": "XwingAircraftOnEntityTickUpdate",
       "type": "procedure",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "xwing_aircraft_on_entity_tick_update",
       "metadata": {
         "files": [
@@ -2530,19 +2530,6 @@
         ]
       },
       "path": "~/Aircrafts/Xwing"
-    },
-    {
-      "name": "ShipCameraSystem",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "ship_camera_system",
-      "metadata": {
-        "files": [
-          "src/main/java/net/efkrdnz/starwarsverse/ShipCameraSystem.java"
-        ]
-      },
-      "path": "~/Aircrafts/Controls/Visuals"
     },
     {
       "name": "CheckShipInvisibility",
@@ -2585,6 +2572,72 @@
         "dependencies": []
       },
       "path": "~/Aircrafts/Controls/Visuals"
+    },
+    {
+      "name": "ShipChaseCamera",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ship_chase_camera",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/ShipChaseCamera.java"
+        ]
+      }
+    },
+    {
+      "name": "GuardStart",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "guard_start",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/GuardStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Lightsabers/Functions/Guard"
+    },
+    {
+      "name": "LightsaberSwing",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightsaber_swing",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/LightsaberSwingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightsabers/Functions"
+    },
+    {
+      "name": "SwingCancel",
+      "type": "mixin",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "swing_cancel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/mixins/SwingCancelMixin.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -2803,6 +2856,18 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
+    },
+    {
+      "name": "guard",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "lightsaber_attack_pattern",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -3016,7 +3081,12 @@
         "children": [
           {
             "name": "Functions",
-            "children": []
+            "children": [
+              {
+                "name": "Guard",
+                "children": []
+              }
+            ]
           },
           {
             "name": "Items",

@@ -169,6 +169,9 @@
     "onRightClickedInAir": {
       "name": "LightsaberRightClick"
     },
+    "onEntitySwing": {
+      "name": "LightsaberSwing"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

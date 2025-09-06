@@ -33,8 +33,9 @@ public class ForcepulluseProcedure {
 			// Calculate charge ratio for scaling effects
 			final double charge_ratio = current_charge / maxcharge;
 			final double force_level = force_user.getData(StarwarsverseModVariables.PLAYER_VARIABLES).force_level;
-			// Max range increases significantly with charge
-			final double max_range = 6 + (10 * charge_ratio) + (force_level * 0.4);
+			// Max range doubled from original: was 6 + (10 * charge_ratio) + (force_level * 0.4)
+			// Now: 12 + (20 * charge_ratio) + (force_level * 0.8)
+			final double max_range = 12 + (20 * charge_ratio) + (force_level * 0.8);
 			// Detection radius around the player (creates a large search area)
 			double detection_radius = max_range + 2;
 			// Use player position as center for detection
