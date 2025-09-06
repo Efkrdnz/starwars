@@ -2637,7 +2637,8 @@
         "files": [
           "src/main/java/net/efkrdnz/starwarsverse/mixins/SwingCancelMixin.java"
         ]
-      }
+      },
+      "path": "~/Mixin"
     },
     {
       "name": "LightsaberPatternReset",
