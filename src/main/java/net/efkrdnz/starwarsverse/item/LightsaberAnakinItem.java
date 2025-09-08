@@ -14,7 +14,7 @@ import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 
-import net.efkrdnz.starwarsverse.procedures.LightsaberSwingProcedure;
+import net.efkrdnz.starwarsverse.procedures.LightsaberSwingWConsProcedure;
 import net.efkrdnz.starwarsverse.procedures.LightsaberRightClickProcedure;
 
 public class LightsaberAnakinItem extends Item {
@@ -34,7 +34,7 @@ public class LightsaberAnakinItem extends Item {
 	@Override
 	public boolean onEntitySwing(ItemStack itemstack, LivingEntity entity, InteractionHand hand) {
 		boolean retval = super.onEntitySwing(itemstack, entity, hand);
-		LightsaberSwingProcedure.execute(entity.level(), entity);
+		LightsaberSwingWConsProcedure.execute(entity.level(), entity);
 		return retval;
 	}
 }

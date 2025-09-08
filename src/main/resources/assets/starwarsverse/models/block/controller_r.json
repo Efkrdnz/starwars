@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "starwarsverse:block/blank",
+    "up": "starwarsverse:block/blank",
+    "north": "starwarsverse:block/blank",
+    "east": "starwarsverse:block/blank",
+    "south": "starwarsverse:block/blank",
+    "west": "starwarsverse:block/blank",
+    "particle": "starwarsverse:block/blank"
+  },
+  "render_type": "solid"
+}

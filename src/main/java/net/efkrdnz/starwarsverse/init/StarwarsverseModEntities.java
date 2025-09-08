@@ -17,8 +17,10 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.core.registries.Registries;
 
 import net.efkrdnz.starwarsverse.entity.XwingAircraftEntity;
+import net.efkrdnz.starwarsverse.entity.TempBossEntity;
 import net.efkrdnz.starwarsverse.entity.PlanetTatooineEntity;
 import net.efkrdnz.starwarsverse.entity.PlanetEarthEntity;
+import net.efkrdnz.starwarsverse.entity.AttackHitboxEntity;
 import net.efkrdnz.starwarsverse.StarwarsverseMod;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
@@ -32,6 +34,14 @@ public class StarwarsverseModEntities {
 			EntityType.Builder.<XwingAircraftEntity>of(XwingAircraftEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(3.2f, 3.2f));
+	public static final DeferredHolder<EntityType<?>, EntityType<TempBossEntity>> TEMP_BOSS = register("temp_boss",
+			EntityType.Builder.<TempBossEntity>of(TempBossEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<AttackHitboxEntity>> ATTACK_HITBOX = register("attack_hitbox",
+			EntityType.Builder.<AttackHitboxEntity>of(AttackHitboxEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(2f, 2f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -44,6 +54,8 @@ public class StarwarsverseModEntities {
 		PlanetEarthEntity.init(event);
 		PlanetTatooineEntity.init(event);
 		XwingAircraftEntity.init(event);
+		TempBossEntity.init(event);
+		AttackHitboxEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -51,5 +63,7 @@ public class StarwarsverseModEntities {
 		event.put(PLANET_EARTH.get(), PlanetEarthEntity.createAttributes().build());
 		event.put(PLANET_TATOOINE.get(), PlanetTatooineEntity.createAttributes().build());
 		event.put(XWING_AIRCRAFT.get(), XwingAircraftEntity.createAttributes().build());
+		event.put(TEMP_BOSS.get(), TempBossEntity.createAttributes().build());
+		event.put(ATTACK_HITBOX.get(), AttackHitboxEntity.createAttributes().build());
 	}
 }

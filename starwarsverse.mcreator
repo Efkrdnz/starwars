@@ -2672,7 +2672,7 @@
       "name": "GuardProjectilenonparry",
       "type": "procedure",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "guard_projectilenonparry",
       "metadata": {
         "files": [
@@ -2698,6 +2698,241 @@
         ]
       },
       "path": "~/Lightsabers/Functions/Guard"
+    },
+    {
+      "name": "LightsaberSwingWCons",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightsaber_swing_w_cons",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/LightsaberSwingWConsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightsabers/Functions"
+    },
+    {
+      "name": "LightsaberSoundHit",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightsaber_sound_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/LightsaberSoundHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightsabers/Functions"
+    },
+    {
+      "name": "TempBoss",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "temp_boss",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/entity/model/TempBossModel.java",
+          "src/main/resources/assets/starwarsverse/models/item/temp_boss_spawn_egg.json",
+          "src/main/java/net/efkrdnz/starwarsverse/client/renderer/TempBossRenderer.java",
+          "src/main/java/net/efkrdnz/starwarsverse/entity/TempBossEntity.java",
+          "src/main/java/net/efkrdnz/starwarsverse/entity/layer/TempBossLayer.java"
+        ]
+      },
+      "path": "~/Entities/Test"
+    },
+    {
+      "name": "TempBossOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "temp_boss_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/TempBossOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Entities/Test"
+    },
+    {
+      "name": "AttackHitbox",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "attack_hitbox",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/client/renderer/AttackHitboxRenderer.java",
+          "src/main/java/net/efkrdnz/starwarsverse/entity/AttackHitboxEntity.java"
+        ]
+      },
+      "path": "~/Entities/Test"
+    },
+    {
+      "name": "TempBossSC",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "temp_boss_sc",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/TempBossSCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "distance",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Entities/Test"
+    },
+    {
+      "name": "AttackHitboxOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_hitbox_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/AttackHitboxOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Entities/Test"
+    },
+    {
+      "name": "Controller",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "controller",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/starwarsverse/loot_table/blocks/controller.json",
+          "src/main/java/net/efkrdnz/starwarsverse/block/ControllerBlock.java",
+          "src/main/resources/assets/starwarsverse/models/item/controller.json",
+          "src/main/resources/assets/starwarsverse/models/block/controller.json",
+          "src/main/java/net/efkrdnz/starwarsverse/block/entity/ControllerBlockEntity.java",
+          "src/main/resources/assets/starwarsverse/blockstates/controller.json"
+        ]
+      },
+      "path": "~/Blocks/Controller"
+    },
+    {
+      "name": "ControllerR",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "controller_r",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/starwarsverse/blockstates/controller_r.json",
+          "src/main/java/net/efkrdnz/starwarsverse/block/ControllerRBlock.java",
+          "src/main/resources/assets/starwarsverse/models/item/controller_r.json",
+          "src/main/resources/assets/starwarsverse/models/block/controller_r.json",
+          "src/main/resources/data/starwarsverse/loot_table/blocks/controller_r.json",
+          "src/main/java/net/efkrdnz/starwarsverse/block/entity/ControllerRBlockEntity.java"
+        ]
+      },
+      "path": "~/Blocks/Controller"
+    },
+    {
+      "name": "ControllerItem",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "controller_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/item/ControllerItemItem.java",
+          "src/main/resources/assets/starwarsverse/models/item/controller_item.json"
+        ]
+      },
+      "path": "~/Blocks/Controller"
+    },
+    {
+      "name": "ControllerItemRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "controller_item_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/ControllerItemRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "direction",
+            "type": "direction"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Controller"
     }
   ],
   "variable_elements": [
@@ -3016,6 +3251,40 @@
       ],
       "category": "neutral",
       "subtitle": "force sense scan"
+    },
+    {
+      "name": "lightsaber_swing",
+      "files": [
+        "swing4",
+        "swing3",
+        "swing1",
+        "swing2"
+      ],
+      "category": "player",
+      "subtitle": "lightsaber swing"
+    },
+    {
+      "name": "lightsaber_block_blaster",
+      "files": [
+        "lightsaber_block_blaster1",
+        "lightsaber_block_blaster2",
+        "lightsaber_block_blaster3",
+        "lightsaber_block_blaster4",
+        "lightsaber_block_blaster5"
+      ],
+      "category": "player",
+      "subtitle": "lightsaber block"
+    },
+    {
+      "name": "lightsaber_hit",
+      "files": [
+        "player_lightsaber_hit3",
+        "player_lightsaber_hit2",
+        "player_lightsaber_hit1",
+        "player_lightsaber_hit4"
+      ],
+      "category": "neutral",
+      "subtitle": "lightsaber burn"
     }
   ],
   "tag_elements": {
@@ -3033,12 +3302,14 @@
       "~CUSTOM:LightsaberLightBlock"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:Controller",
       "~CUSTOM:AircraftWorkbench",
       "~CUSTOM:AircraftEngine",
       "~CUSTOM:AircraftMainframe",
       "~CUSTOM:SteelChasing"
     ],
     "BLOCKS:minecraft:needs_stone_tool": [
+      "~CUSTOM:Controller",
       "~CUSTOM:AircraftWorkbench"
     ],
     "ENTITIES:minecraft:sw_aircraft": [
@@ -3061,8 +3332,8 @@
       "death.attack.force_push": "%1$s pushed to death!",
       "key.starwarsverse.ability_1": "Ability 1",
       "death.attack.force_push.player": "%1$s died whilst trying to escape %2$s",
-      "item.starwarsverse.kyber_crystal_red": "Kyber Crystal Red",
       "key.starwarsverse.ship_left": "Ship Left",
+      "item.starwarsverse.kyber_crystal_red": "Kyber Crystal Red",
       "subtitles.lightsaber_ambient_longer": "lightsaber ambient",
       "death.attack.force_lightning.player": "%1$s died whilst trying to escape %2$s",
       "item.starwarsverse.planet_earth_spawn_egg": "Planet Earth Spawn Egg",
@@ -3070,6 +3341,7 @@
       "effect.starwarsverse.glient_glow_effect": "Client Glow",
       "effect.starwarsverse.force_sense_effect": "Force Sense",
       "item.starwarsverse.kyber_crystal_green": "Kyber Crystal Green",
+      "subtitles.lightsaber_hit": "lightsaber burn",
       "entity.starwarsverse.planet_tatooine": "Planet Tatooine",
       "subtitles.hit2": "hit",
       "block.starwarsverse.steel_chasing": "Steel Chasing",
@@ -3079,6 +3351,7 @@
       "subtitles.lightsaber_ambient": "lightsaber ambient",
       "item.starwarsverse.planet_tatooine_spawn_egg": "Planet Tatooine Spawn Egg",
       "subtitles.ambient": "ambient",
+      "item.starwarsverse.controller_item": "Controller Item",
       "key.starwarsverse.ship_backward": "Ship Backward",
       "subtitles.force_push": "force push sound",
       "gui.starwarsverse.forcemenugui.button_force_push1": "Force Lightning",
@@ -3092,9 +3365,11 @@
       "subtitles.force_charge": "force charge sound",
       "item.starwarsverse.kyber_crystal_black": "Kyber Crystal Black",
       "death.attack.force_pull.player": "%1$s died whilst trying to escape %2$s",
+      "item.starwarsverse.temp_boss_spawn_egg": "Temp Boss Spawn Egg",
       "subtitles.lightsaber_close": "lightsaber close",
       "item.starwarsverse.lightsaber_count_dooku": "Lightsaber Count Dooku",
       "entity.starwarsverse.xwing_aircraft": "Xwing Aircraft",
+      "block.starwarsverse.controller_r": "Controller R",
       "item.starwarsverse.kyber_crystal_yellow": "Kyber Crystal Yellow",
       "death.attack.force_pull": "%1$s pulled to death!",
       "gui.starwarsverse.ship_control.button_empty": "",
@@ -3104,10 +3379,13 @@
       "gui.starwarsverse.forcemenugui.button_1": "1",
       "death.attack.force_pull.item": "%1$s force pulled to death by %2$s",
       "gui.starwarsverse.forcemenugui.button_3": "3",
+      "entity.starwarsverse.temp_boss": "Temp Boss",
       "effect.starwarsverse.screen_shake": "Screen Shake",
       "subtitles.force_pull": "Force Pull Sound",
       "item.starwarsverse.xwing_aircraft_spawn_egg": "Xwing Aircraft Spawn Egg",
       "subtitles.force_sense": "force sense scan",
+      "subtitles.lightsaber_swing": "lightsaber swing",
+      "subtitles.lightsaber_block_blaster": "lightsaber block",
       "block.starwarsverse.lightsaber_light_block": ".",
       "entity.starwarsverse.planet_earth": "Planet Earth",
       "key.starwarsverse.ship_right": "Ship Right",
@@ -3115,10 +3393,12 @@
       "item.starwarsverse.kyber_crystal_purple": "Kyber Crystal Purple",
       "gui.starwarsverse.forcemenugui.button_force_push": "Force Push",
       "gui.starwarsverse.forcemenugui.button_force_sens": "Force Sense",
+      "block.starwarsverse.controller": "Controller",
       "death.attack.force_lightning": "%1$s zapped to death!",
       "item.starwarsverse.kyber_crystal_orange": "Kyber Crystal Orange",
       "item.starwarsverse.lightsaber_anakin": "Lightsaber Anakin",
-      "block.starwarsverse.aircraft_workbench": "Aircraft Workbench"
+      "block.starwarsverse.aircraft_workbench": "Aircraft Workbench",
+      "entity.starwarsverse.attack_hitbox": "Attack Hitbox"
     }
   },
   "foldersRoot": {
@@ -3199,6 +3479,10 @@
           },
           {
             "name": "TemporaryLightBlock",
+            "children": []
+          },
+          {
+            "name": "Controller",
             "children": []
           }
         ]
@@ -3366,6 +3650,15 @@
       {
         "name": "Teams",
         "children": []
+      },
+      {
+        "name": "Entities",
+        "children": [
+          {
+            "name": "Test",
+            "children": []
+          }
+        ]
       }
     ]
   },

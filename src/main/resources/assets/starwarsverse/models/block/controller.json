@@ -1,0 +1,10 @@
+{
+  "parent": "starwarsverse:custom/controller",
+  "textures": {
+    "all": "starwarsverse:block/04_controller_texture",
+    "particle": "starwarsverse:block/04_controller_texture",
+    "1": "starwarsverse:block/04_controller_texture",
+    "2": "starwarsverse:block/controller_radar"
+  },
+  "render_type": "cutout"
+}

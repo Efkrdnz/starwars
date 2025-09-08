@@ -170,7 +170,7 @@
       "name": "LightsaberRightClick"
     },
     "onEntitySwing": {
-      "name": "LightsaberSwing"
+      "name": "LightsaberSwingWCons"
     },
     "enableRanged": false,
     "shootConstantly": false,

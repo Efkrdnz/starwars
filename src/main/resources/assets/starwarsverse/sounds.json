@@ -88,5 +88,72 @@
         "stream": false
       }
     ]
+  },
+  "lightsaber_swing": {
+    "subtitle": "subtitles.lightsaber_swing",
+    "sounds": [
+      {
+        "name": "starwarsverse:swing4",
+        "stream": false
+      },
+      {
+        "name": "starwarsverse:swing3",
+        "stream": false
+      },
+      {
+        "name": "starwarsverse:swing1",
+        "stream": false
+      },
+      {
+        "name": "starwarsverse:swing2",
+        "stream": false
+      }
+    ]
+  },
+  "lightsaber_block_blaster": {
+    "subtitle": "subtitles.lightsaber_block_blaster",
+    "sounds": [
+      {
+        "name": "starwarsverse:lightsaber_block_blaster1",
+        "stream": false
+      },
+      {
+        "name": "starwarsverse:lightsaber_block_blaster2",
+        "stream": false
+      },
+      {
+        "name": "starwarsverse:lightsaber_block_blaster3",
+        "stream": false
+      },
+      {
+        "name": "starwarsverse:lightsaber_block_blaster4",
+        "stream": false
+      },
+      {
+        "name": "starwarsverse:lightsaber_block_blaster5",
+        "stream": false
+      }
+    ]
+  },
+  "lightsaber_hit": {
+    "subtitle": "subtitles.lightsaber_hit",
+    "sounds": [
+      {
+        "name": "starwarsverse:player_lightsaber_hit3",
+        "stream": false
+      },
+      {
+        "name": "starwarsverse:player_lightsaber_hit2",
+        "stream": false
+      },
+      {
+        "name": "starwarsverse:player_lightsaber_hit1",
+        "stream": false
+      },
+      {
+        "name": "starwarsverse:player_lightsaber_hit4",
+        "stream": false
+      }
+    ]
   }
 }

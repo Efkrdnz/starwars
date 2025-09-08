@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "starwarsverse:controller",
     "starwarsverse:aircraft_workbench"
   ]
 }

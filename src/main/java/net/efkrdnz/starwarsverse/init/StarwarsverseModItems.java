@@ -33,6 +33,7 @@ import net.efkrdnz.starwarsverse.item.KyberCrystalOrangeItem;
 import net.efkrdnz.starwarsverse.item.KyberCrystalGreenItem;
 import net.efkrdnz.starwarsverse.item.KyberCrystalBlueItem;
 import net.efkrdnz.starwarsverse.item.KyberCrystalBlackItem;
+import net.efkrdnz.starwarsverse.item.ControllerItemItem;
 import net.efkrdnz.starwarsverse.StarwarsverseMod;
 
 public class StarwarsverseModItems {
@@ -55,6 +56,10 @@ public class StarwarsverseModItems {
 	public static final DeferredItem<Item> AIRCRAFT_WORKBENCH = block(StarwarsverseModBlocks.AIRCRAFT_WORKBENCH);
 	public static final DeferredItem<Item> LIGHTSABER_LIGHT_BLOCK = block(StarwarsverseModBlocks.LIGHTSABER_LIGHT_BLOCK);
 	public static final DeferredItem<Item> XWING_AIRCRAFT_SPAWN_EGG = REGISTRY.register("xwing_aircraft_spawn_egg", () -> new DeferredSpawnEggItem(StarwarsverseModEntities.XWING_AIRCRAFT, -1, -1, new Item.Properties()));
+	public static final DeferredItem<Item> TEMP_BOSS_SPAWN_EGG = REGISTRY.register("temp_boss_spawn_egg", () -> new DeferredSpawnEggItem(StarwarsverseModEntities.TEMP_BOSS, -1, -1, new Item.Properties()));
+	public static final DeferredItem<Item> CONTROLLER = block(StarwarsverseModBlocks.CONTROLLER);
+	public static final DeferredItem<Item> CONTROLLER_R = block(StarwarsverseModBlocks.CONTROLLER_R);
+	public static final DeferredItem<Item> CONTROLLER_ITEM = REGISTRY.register("controller_item", ControllerItemItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

@@ -1,0 +1,8 @@
+{
+  "parent": "starwarsverse:custom/controlleritem",
+  "textures": {
+    "1": "starwarsverse:block/04_controller_texture",
+    "2": "starwarsverse:block/controller_radar",
+    "particle": "minecraft:item/carrot_on_a_stick"
+  }
+}

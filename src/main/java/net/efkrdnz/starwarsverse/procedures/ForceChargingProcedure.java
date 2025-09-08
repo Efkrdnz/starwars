@@ -37,7 +37,7 @@ public class ForceChargingProcedure {
 			return;
 		String current_used_power = "";
 		if (entity.getData(StarwarsverseModVariables.PLAYER_VARIABLES).is_using_force) {
-			if (world.dayTime() % 5 == 0) {
+			if (world.dayTime() % 7 == 0) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("starwarsverse:force_charge")), SoundSource.NEUTRAL, 1, 1);

@@ -5,6 +5,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import net.efkrdnz.starwarsverse.entity.XwingAircraftEntity;
+import net.efkrdnz.starwarsverse.entity.TempBossEntity;
 import net.efkrdnz.starwarsverse.entity.PlanetTatooineEntity;
 import net.efkrdnz.starwarsverse.entity.PlanetEarthEntity;
 
@@ -28,6 +29,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof XwingAircraftEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof TempBossEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

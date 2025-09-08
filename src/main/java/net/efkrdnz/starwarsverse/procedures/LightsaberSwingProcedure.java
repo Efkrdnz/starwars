@@ -3,9 +3,14 @@ package net.efkrdnz.starwarsverse.procedures;
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.BlockPos;
 
 import net.efkrdnz.starwarsverse.network.StarwarsverseModVariables;
 
@@ -26,6 +31,13 @@ public class LightsaberSwingProcedure {
 		} else {
 			// reset to first attack after third
 			setAttackPattern(entity, 1, "attack1", world);
+		}
+		if (world instanceof Level _level) {
+			if (!world.isClientSide()) {
+				_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("starwarsverse:lightsaber_swing")), SoundSource.PLAYERS, 0.2f, 1);
+			} else {
+				_level.playLocalSound(entity.getX(), entity.getY(), entity.getZ(), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("starwarsverse:lightsaber_swing")), SoundSource.PLAYERS, 0.1f, 1, false);
+			}
 		}
 	}
 

@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "04_controller_texture",
+        "2": "controller_radar"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -17,6 +17,8 @@ import net.minecraft.core.registries.BuiltInRegistries;
 
 import net.efkrdnz.starwarsverse.block.entity.LightsaberLightBlockBlockEntity;
 import net.efkrdnz.starwarsverse.block.entity.KyberInfuserBlockEntity;
+import net.efkrdnz.starwarsverse.block.entity.ControllerRBlockEntity;
+import net.efkrdnz.starwarsverse.block.entity.ControllerBlockEntity;
 import net.efkrdnz.starwarsverse.block.entity.AircraftWorkbenchBlockEntity;
 import net.efkrdnz.starwarsverse.StarwarsverseMod;
 
@@ -26,6 +28,8 @@ public class StarwarsverseModBlockEntities {
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> KYBER_INFUSER = register("kyber_infuser", StarwarsverseModBlocks.KYBER_INFUSER, KyberInfuserBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> AIRCRAFT_WORKBENCH = register("aircraft_workbench", StarwarsverseModBlocks.AIRCRAFT_WORKBENCH, AircraftWorkbenchBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> LIGHTSABER_LIGHT_BLOCK = register("lightsaber_light_block", StarwarsverseModBlocks.LIGHTSABER_LIGHT_BLOCK, LightsaberLightBlockBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> CONTROLLER = register("controller", StarwarsverseModBlocks.CONTROLLER, ControllerBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> CONTROLLER_R = register("controller_r", StarwarsverseModBlocks.CONTROLLER_R, ControllerRBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities
@@ -38,5 +42,7 @@ public class StarwarsverseModBlockEntities {
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, KYBER_INFUSER.get(), (blockEntity, side) -> ((KyberInfuserBlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, AIRCRAFT_WORKBENCH.get(), (blockEntity, side) -> ((AircraftWorkbenchBlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, LIGHTSABER_LIGHT_BLOCK.get(), (blockEntity, side) -> ((LightsaberLightBlockBlockEntity) blockEntity).getItemHandler());
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, CONTROLLER.get(), (blockEntity, side) -> ((ControllerBlockEntity) blockEntity).getItemHandler());
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, CONTROLLER_R.get(), (blockEntity, side) -> ((ControllerRBlockEntity) blockEntity).getItemHandler());
 	}
 }

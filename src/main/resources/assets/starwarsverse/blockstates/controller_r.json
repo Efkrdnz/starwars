@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "starwarsverse:block/controller_r"
+    }
+  }
+}
