@@ -8,6 +8,7 @@ import net.neoforged.bus.api.ICancellableEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.Projectile;
@@ -17,12 +18,16 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.BlockPos;
 
 import javax.annotation.Nullable;
 
+import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationRegistry;
 import dev.kosmx.playerAnim.api.AnimUtils;
 
 @EventBusSubscriber
@@ -50,33 +55,37 @@ public class GuardProjectilenonparryProcedure {
 				}
 				rand = Mth.nextInt(RandomSource.create(), 1, 3);
 				if (rand == 1) {
-					AnimUtils.disableFirstPersonAnim = true;
-					if (world.isClientSide()) {
-						SetupAnimationsProcedure.setAnimationClientside((Player) entity, "block1", false);
-					}
-					if (!world.isClientSide()) {
-						if (entity instanceof Player)
-							PacketDistributor.sendToPlayersInDimension((ServerLevel) entity.level(), new SetupAnimationsProcedure.StarwarsverseModAnimationMessage("block1", entity.getId(), false));
-					}
+					playBlockAnimation(world, entity, "block");
 				} else if (rand == 2) {
-					AnimUtils.disableFirstPersonAnim = true;
-					if (world.isClientSide()) {
-						SetupAnimationsProcedure.setAnimationClientside((Player) entity, "block2", false);
-					}
-					if (!world.isClientSide()) {
-						if (entity instanceof Player)
-							PacketDistributor.sendToPlayersInDimension((ServerLevel) entity.level(), new SetupAnimationsProcedure.StarwarsverseModAnimationMessage("block2", entity.getId(), false));
-					}
+					playBlockAnimation(world, entity, "block2");
 				} else {
-					AnimUtils.disableFirstPersonAnim = true;
-					if (world.isClientSide()) {
-						SetupAnimationsProcedure.setAnimationClientside((Player) entity, "block3", false);
-					}
-					if (!world.isClientSide()) {
-						if (entity instanceof Player)
-							PacketDistributor.sendToPlayersInDimension((ServerLevel) entity.level(), new SetupAnimationsProcedure.StarwarsverseModAnimationMessage("block3", entity.getId(), false));
+					playBlockAnimation(world, entity, "block3");
+				}
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("starwarsverse:lightsaber_block_blaster")), SoundSource.PLAYERS, (float) 0.5,
+								1);
+					} else {
+						_level.playLocalSound(entity.getX(), entity.getY(), entity.getZ(), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("starwarsverse:lightsaber_block_blaster")), SoundSource.PLAYERS, (float) 0.4, 1, false);
 					}
 				}
+			}
+		}
+	}
+
+	// helper method to safely play animations
+	private static void playBlockAnimation(LevelAccessor world, Entity entity, String animationName) {
+		AnimUtils.disableFirstPersonAnim = true;
+		if (world.isClientSide()) {
+			// check if animation exists before playing on client
+			if (PlayerAnimationRegistry.getAnimation(ResourceLocation.fromNamespaceAndPath("starwarsverse", animationName)) != null) {
+				SetupAnimationsProcedure.setAnimationClientside((Player) entity, animationName, false);
+			}
+		}
+		if (!world.isClientSide()) {
+			if (entity instanceof Player) {
+				// always send the network message from server - the client will handle the check
+				PacketDistributor.sendToPlayersInDimension((ServerLevel) entity.level(), new SetupAnimationsProcedure.StarwarsverseModAnimationMessage(animationName, entity.getId(), false));
 			}
 		}
 	}
