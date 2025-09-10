@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "starwarsverse:block/multipurpose_workbench"
+    },
+    "facing=east": {
+      "model": "starwarsverse:block/multipurpose_workbench",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "starwarsverse:block/multipurpose_workbench",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "starwarsverse:block/multipurpose_workbench",
+      "y": 270
+    }
+  }
+}

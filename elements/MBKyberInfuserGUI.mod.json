@@ -1,0 +1,149 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 192,
+    "height": 164,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": -1,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "mb_kyberinfuser.png",
+          "use1Xscale": false,
+          "x": 118,
+          "y": 38
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_crystal_assembly",
+          "image": "crystal_assembly_unexposed.png",
+          "hoveredImage": "crystal_assembly.png",
+          "x": 131,
+          "y": 9
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_kyber_crystal_infusion",
+          "text": {
+            "fixedValue": "Kyber Crystal Infusion"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 131,
+          "y": 14
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_kyber_crystal_infusion1",
+          "text": {
+            "fixedValue": "Kyber Crystal Infusion"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 139,
+          "y": 14
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_kyber_crystal_infusion2",
+          "text": {
+            "fixedValue": "Kyber Crystal Infusion"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 131,
+          "y": 9
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_kyber_crystal_infusion3",
+          "text": {
+            "fixedValue": "Kyber Crystal Infusion"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 139,
+          "y": 9
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false,
+            "name": "IsNotLightsaber"
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 150,
+          "y": 80
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false,
+            "name": "IsNotKyber"
+          },
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 195,
+          "y": 80
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 2,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "KyberInfuserCollect"
+          },
+          "x": 249,
+          "y": 80
+        }
+      }
+    ],
+    "onTick": {
+      "name": "KyberInfuserGuiWhileThisGUIIsOpenTick"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

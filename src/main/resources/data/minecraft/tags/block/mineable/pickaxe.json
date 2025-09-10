@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "starwarsverse:multipurpose_workbench",
     "starwarsverse:aircraft_workbench",
     "starwarsverse:aircraft_engine",
     "starwarsverse:aircraft_mainframe",

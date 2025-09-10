@@ -26,4 +26,8 @@ public class StarwarsverseModSounds {
 	public static final DeferredHolder<SoundEvent, SoundEvent> FORCE_CHARGE = REGISTRY.register("force_charge", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("starwarsverse", "force_charge")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> FORCE_PULL = REGISTRY.register("force_pull", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("starwarsverse", "force_pull")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> FORCE_SENSE = REGISTRY.register("force_sense", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("starwarsverse", "force_sense")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> LIGHTSABER_HIT = REGISTRY.register("lightsaber_hit", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("starwarsverse", "lightsaber_hit")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> LIGHTSABER_SWING = REGISTRY.register("lightsaber_swing", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("starwarsverse", "lightsaber_swing")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> LIGHTSABER_BLOCK_BLASTER = REGISTRY.register("lightsaber_block_blaster",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("starwarsverse", "lightsaber_block_blaster")));
 }

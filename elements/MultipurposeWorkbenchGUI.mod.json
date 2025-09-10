@@ -1,0 +1,96 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 192,
+    "height": 164,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": -1,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "multipurpose_bench_gui.png",
+          "use1Xscale": false,
+          "x": 118,
+          "y": 38
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_crystal_assembly",
+          "image": "crystal_assembly_unexposed.png",
+          "hoveredImage": "crystal_assembly.png",
+          "onClick": {
+            "name": "OpenKyberInfuserGUI"
+          },
+          "x": 131,
+          "y": 9
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_kyber_crystal_infusion",
+          "text": {
+            "fixedValue": "Kyber Crystal Infusion"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 131,
+          "y": 14
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_kyber_crystal_infusion1",
+          "text": {
+            "fixedValue": "Kyber Crystal Infusion"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 139,
+          "y": 14
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_kyber_crystal_infusion2",
+          "text": {
+            "fixedValue": "Kyber Crystal Infusion"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 131,
+          "y": 9
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_kyber_crystal_infusion3",
+          "text": {
+            "fixedValue": "Kyber Crystal Infusion"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 139,
+          "y": 9
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

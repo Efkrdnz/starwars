@@ -141,8 +141,12 @@
       }
     ],
     "name": "Lightsaber Anakin",
-    "rarity": "COMMON",
-    "creativeTabs": [],
+    "rarity": "EPIC",
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:StarwarsItems"
+      }
+    ],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,
@@ -170,7 +174,7 @@
       "name": "LightsaberRightClick"
     },
     "onEntitySwing": {
-      "name": "LightsaberSwing"
+      "name": "LightsaberSwingCon"
     },
     "enableRanged": false,
     "shootConstantly": false,

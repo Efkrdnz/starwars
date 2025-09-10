@@ -38,9 +38,9 @@ public class LightsaberAmbientSoundProcedure {
 			if (world.dayTime() % 40 == 0) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("starwarsverse:lightsaber_ambient_longer")), SoundSource.AMBIENT, (float) 0.15, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("starwarsverse:lightsaber_ambient_longer")), SoundSource.AMBIENT, (float) 0.01, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("starwarsverse:lightsaber_ambient_longer")), SoundSource.AMBIENT, (float) 0.15, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("starwarsverse:lightsaber_ambient_longer")), SoundSource.AMBIENT, (float) 0.01, 1, false);
 					}
 				}
 			}

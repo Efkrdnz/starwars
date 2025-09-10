@@ -1,0 +1,11 @@
+{
+  "_fv": 69,
+  "_type": "tab",
+  "definition": {
+    "name": "Starwars Items",
+    "icon": {
+      "value": "CUSTOM:KyberCrystalRed"
+    },
+    "showSearch": false
+  }
+}

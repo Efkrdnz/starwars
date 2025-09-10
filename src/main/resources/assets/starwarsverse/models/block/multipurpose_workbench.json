@@ -1,0 +1,10 @@
+{
+  "parent": "starwarsverse:custom/multipurpose_bench",
+  "textures": {
+    "all": "starwarsverse:block/multipurpose_workbench_main",
+    "particle": "starwarsverse:block/multipurpose_workbench_main",
+    "1": "starwarsverse:block/multipurpose_workbench_main",
+    "2": "starwarsverse:block/multipurpose_workbench_monitor"
+  },
+  "render_type": "solid"
+}

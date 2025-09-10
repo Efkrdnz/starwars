@@ -1,7 +1,7 @@
 {
-  "parent": "starwarsverse:custom/lightsabercountdookubase",
+  "parent": "starwarsverse:custom/lightsabercountdooku",
   "textures": {
-    "1": "starwarsverse:block/lightsaber_count_dooku_black",
+    "2": "starwarsverse:block/lightsaber_count_dooku_default",
     "particle": "starwarsverse:item/lightsaber_countdooku"
   },
   "overrides": [

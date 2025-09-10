@@ -292,8 +292,7 @@
           "src/main/resources/data/starwarsverse/loot_table/blocks/kyber_infuser.json",
           "src/main/resources/assets/starwarsverse/models/item/kyber_infuser.json",
           "src/main/resources/assets/starwarsverse/blockstates/kyber_infuser.json",
-          "src/main/java/net/efkrdnz/starwarsverse/block/KyberInfuserBlock.java",
-          "src/main/java/net/efkrdnz/starwarsverse/block/entity/KyberInfuserBlockEntity.java"
+          "src/main/java/net/efkrdnz/starwarsverse/block/KyberInfuserBlock.java"
         ]
       },
       "path": "~/Blocks/KyberInfuser"
@@ -1392,7 +1391,7 @@
       "name": "LightsaberDamageWhileDisabled",
       "type": "procedure",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "lightsaber_damage_while_disabled",
       "metadata": {
         "files": [
@@ -2756,6 +2755,160 @@
         ]
       },
       "path": "~/Lightsabers/Functions"
+    },
+    {
+      "name": "MultipurposeWorkbenchGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "multipurpose_workbench_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/world/inventory/MultipurposeWorkbenchGUIMenu.java",
+          "src/main/java/net/efkrdnz/starwarsverse/client/gui/MultipurposeWorkbenchGUIScreen.java",
+          "src/main/java/net/efkrdnz/starwarsverse/network/MultipurposeWorkbenchGUIButtonMessage.java"
+        ]
+      },
+      "path": "~/Blocks/MultipurposeWorkbench"
+    },
+    {
+      "name": "MultipurposeWorkbench",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "multipurpose_workbench",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/starwarsverse/loot_table/blocks/multipurpose_workbench.json",
+          "src/main/resources/assets/starwarsverse/models/block/multipurpose_workbench.json",
+          "src/main/java/net/efkrdnz/starwarsverse/block/entity/MultipurposeWorkbenchBlockEntity.java",
+          "src/main/java/net/efkrdnz/starwarsverse/block/MultipurposeWorkbenchBlock.java",
+          "src/main/resources/assets/starwarsverse/models/item/multipurpose_workbench.json",
+          "src/main/resources/assets/starwarsverse/blockstates/multipurpose_workbench.json"
+        ]
+      },
+      "path": "~/Blocks/MultipurposeWorkbench"
+    },
+    {
+      "name": "LaserWhileProjectileFlyingTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "laser_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/LaserWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Blasters/Projectile"
+    },
+    {
+      "name": "Laser",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "laser",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/client/renderer/LaserRenderer.java",
+          "src/main/java/net/efkrdnz/starwarsverse/entity/LaserEntity.java"
+        ]
+      },
+      "path": "~/Blasters/Projectile"
+    },
+    {
+      "name": "TestBlaster",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_blaster",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/item/TestBlasterItem.java",
+          "src/main/resources/assets/starwarsverse/models/item/test_blaster.json"
+        ]
+      },
+      "path": "~/Blasters/Blaster - Storm Trooper"
+    },
+    {
+      "name": "StarwarsItems",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starwars_items",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "MBKyberInfuserGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mb_kyber_infuser_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/world/inventory/MBKyberInfuserGUIMenu.java",
+          "src/main/java/net/efkrdnz/starwarsverse/network/MBKyberInfuserGUISlotMessage.java",
+          "src/main/java/net/efkrdnz/starwarsverse/client/gui/MBKyberInfuserGUIScreen.java"
+        ]
+      },
+      "path": "~/Blocks/MultipurposeWorkbench/KyberInfuserGUI"
+    },
+    {
+      "name": "OpenKyberInfuserGUI",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_kyber_infuser_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/OpenKyberInfuserGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/MultipurposeWorkbench/KyberInfuserGUI"
+    },
+    {
+      "name": "GuardProjectileReflection",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "guard_projectile_reflection",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/GuardProjectileReflectionProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Lightsabers/Functions/Guard"
     }
   ],
   "variable_elements": [
@@ -3074,6 +3227,40 @@
       ],
       "category": "neutral",
       "subtitle": "force sense scan"
+    },
+    {
+      "name": "lightsaber_hit",
+      "files": [
+        "player_lightsaber_hit3",
+        "player_lightsaber_hit2",
+        "player_lightsaber_hit1",
+        "player_lightsaber_hit4"
+      ],
+      "category": "neutral",
+      "subtitle": "lightsaber hit"
+    },
+    {
+      "name": "lightsaber_swing",
+      "files": [
+        "swing4",
+        "swing3",
+        "swing1",
+        "swing2"
+      ],
+      "category": "ambient",
+      "subtitle": "lightsaber swing"
+    },
+    {
+      "name": "lightsaber_block_blaster",
+      "files": [
+        "lightsaber_block_blaster1",
+        "lightsaber_block_blaster2",
+        "lightsaber_block_blaster3",
+        "lightsaber_block_blaster4",
+        "lightsaber_block_blaster5"
+      ],
+      "category": "neutral",
+      "subtitle": "lightsaber block"
     }
   ],
   "tag_elements": {
@@ -3083,6 +3270,7 @@
       "CUSTOM:ForceLightning"
     ],
     "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:MultipurposeWorkbench",
       "~CUSTOM:AircraftEngine",
       "~CUSTOM:AircraftMainframe",
       "~CUSTOM:SteelChasing"
@@ -3091,6 +3279,7 @@
       "~CUSTOM:LightsaberLightBlock"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:MultipurposeWorkbench",
       "~CUSTOM:AircraftWorkbench",
       "~CUSTOM:AircraftEngine",
       "~CUSTOM:AircraftMainframe",
@@ -3107,15 +3296,33 @@
       "CUSTOM:LightsaberCountDooku"
     ]
   },
-  "tab_element_order": {},
+  "tab_element_order": {
+    "CUSTOM:StarwarsItems": [
+      "LightsaberAnakin",
+      "LightsaberCountDooku",
+      "KyberCrystalRed",
+      "KyberCrystalBlue",
+      "KyberCrystalGreen",
+      "KyberCrystalWhite",
+      "KyberCrystalYellow",
+      "KyberCrystalOrange",
+      "KyberCrystalPurple",
+      "KyberCrystalBlack",
+      "MultipurposeWorkbench"
+    ]
+  },
   "language_map": {
     "en_us": {
       "key.starwarsverse.ability_2": "Ability 2",
       "block.starwarsverse.kyber_infuser": "Kyber Infuser",
+      "item_group.starwarsverse.starwars_items": "Starwars Items",
       "gui.starwarsverse.forcemenugui.button_force_hold": "Force Hold",
       "key.starwarsverse.ability_3": "Ability 3",
       "gui.starwarsverse.forcemenugui.button_force_pull": "Force Pull",
+      "gui.starwarsverse.multipurpose_workbench_gui.tooltip_kyber_crystal_infusion1": "Kyber Crystal Infusion",
       "biome.starwarsverse.space_biome": "Space Biome",
+      "gui.starwarsverse.multipurpose_workbench_gui.tooltip_kyber_crystal_infusion2": "Kyber Crystal Infusion",
+      "gui.starwarsverse.multipurpose_workbench_gui.tooltip_kyber_crystal_infusion3": "Kyber Crystal Infusion",
       "death.attack.force_push": "%1$s pushed to death!",
       "key.starwarsverse.ability_1": "Ability 1",
       "death.attack.force_push.player": "%1$s died whilst trying to escape %2$s",
@@ -3128,6 +3335,7 @@
       "effect.starwarsverse.glient_glow_effect": "Client Glow",
       "effect.starwarsverse.force_sense_effect": "Force Sense",
       "item.starwarsverse.kyber_crystal_green": "Kyber Crystal Green",
+      "subtitles.lightsaber_hit": "lightsaber hit",
       "entity.starwarsverse.planet_tatooine": "Planet Tatooine",
       "subtitles.hit2": "hit",
       "block.starwarsverse.steel_chasing": "Steel Chasing",
@@ -3141,6 +3349,7 @@
       "subtitles.force_push": "force push sound",
       "gui.starwarsverse.forcemenugui.button_force_push1": "Force Lightning",
       "subtitles.lightsaber_open": "lightsaber open",
+      "item.starwarsverse.test_blaster": "Test Blaster",
       "item.starwarsverse.steel_ingot": "Steel Ingot",
       "gui.starwarsverse.kyber_infuser_gui.label_for_kyber_infusion": "for Kyber infusion",
       "item.starwarsverse.kyber_crystal_white": "Kyber Crystal White",
@@ -3151,6 +3360,7 @@
       "item.starwarsverse.kyber_crystal_black": "Kyber Crystal Black",
       "death.attack.force_pull.player": "%1$s died whilst trying to escape %2$s",
       "subtitles.lightsaber_close": "lightsaber close",
+      "block.starwarsverse.multipurpose_workbench": "Multipurpose Workbench",
       "item.starwarsverse.lightsaber_count_dooku": "Lightsaber Count Dooku",
       "entity.starwarsverse.xwing_aircraft": "Xwing Aircraft",
       "item.starwarsverse.kyber_crystal_yellow": "Kyber Crystal Yellow",
@@ -3166,15 +3376,23 @@
       "subtitles.force_pull": "Force Pull Sound",
       "item.starwarsverse.xwing_aircraft_spawn_egg": "Xwing Aircraft Spawn Egg",
       "subtitles.force_sense": "force sense scan",
+      "subtitles.lightsaber_swing": "lightsaber swing",
+      "subtitles.lightsaber_block_blaster": "lightsaber block",
       "block.starwarsverse.lightsaber_light_block": ".",
+      "subtitles.lightsaber_block": "lightsaber block",
       "entity.starwarsverse.planet_earth": "Planet Earth",
+      "gui.starwarsverse.multipurpose_workbench_gui.tooltip_kyber_crystal_infusion": "Kyber Crystal Infusion",
       "key.starwarsverse.ship_right": "Ship Right",
       "subtitles.lightsaber": "lightsaber",
+      "gui.starwarsverse.mb_kyber_infuser_gui.tooltip_kyber_crystal_infusion3": "Kyber Crystal Infusion",
       "item.starwarsverse.kyber_crystal_purple": "Kyber Crystal Purple",
       "gui.starwarsverse.forcemenugui.button_force_push": "Force Push",
       "gui.starwarsverse.forcemenugui.button_force_sens": "Force Sense",
+      "gui.starwarsverse.mb_kyber_infuser_gui.tooltip_kyber_crystal_infusion1": "Kyber Crystal Infusion",
+      "gui.starwarsverse.mb_kyber_infuser_gui.tooltip_kyber_crystal_infusion2": "Kyber Crystal Infusion",
       "death.attack.force_lightning": "%1$s zapped to death!",
       "item.starwarsverse.kyber_crystal_orange": "Kyber Crystal Orange",
+      "gui.starwarsverse.mb_kyber_infuser_gui.tooltip_kyber_crystal_infusion": "Kyber Crystal Infusion",
       "item.starwarsverse.lightsaber_anakin": "Lightsaber Anakin",
       "block.starwarsverse.aircraft_workbench": "Aircraft Workbench"
     }
@@ -3258,6 +3476,15 @@
           {
             "name": "TemporaryLightBlock",
             "children": []
+          },
+          {
+            "name": "MultipurposeWorkbench",
+            "children": [
+              {
+                "name": "KyberInfuserGUI",
+                "children": []
+              }
+            ]
           }
         ]
       },
@@ -3424,6 +3651,19 @@
       {
         "name": "Teams",
         "children": []
+      },
+      {
+        "name": "Blasters",
+        "children": [
+          {
+            "name": "Projectile",
+            "children": []
+          },
+          {
+            "name": "Blaster - Storm Trooper",
+            "children": []
+          }
+        ]
       }
     ]
   },

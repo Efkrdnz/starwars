@@ -14,12 +14,12 @@ import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 
-import net.efkrdnz.starwarsverse.procedures.LightsaberSwingProcedure;
+import net.efkrdnz.starwarsverse.procedures.LightsaberSwingConProcedure;
 import net.efkrdnz.starwarsverse.procedures.LightsaberRightClickProcedure;
 
 public class LightsaberAnakinItem extends Item {
 	public LightsaberAnakinItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)
 				.attributes(ItemAttributeModifiers.builder().add(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_ID, 11, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND)
 						.add(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_ID, -2.4, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND).build()));
 	}
@@ -34,7 +34,7 @@ public class LightsaberAnakinItem extends Item {
 	@Override
 	public boolean onEntitySwing(ItemStack itemstack, LivingEntity entity, InteractionHand hand) {
 		boolean retval = super.onEntitySwing(itemstack, entity, hand);
-		LightsaberSwingProcedure.execute(entity.level(), entity);
+		LightsaberSwingConProcedure.execute(entity.level(), entity);
 		return retval;
 	}
 }

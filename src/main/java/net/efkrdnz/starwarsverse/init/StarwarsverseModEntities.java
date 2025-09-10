@@ -19,6 +19,7 @@ import net.minecraft.core.registries.Registries;
 import net.efkrdnz.starwarsverse.entity.XwingAircraftEntity;
 import net.efkrdnz.starwarsverse.entity.PlanetTatooineEntity;
 import net.efkrdnz.starwarsverse.entity.PlanetEarthEntity;
+import net.efkrdnz.starwarsverse.entity.LaserEntity;
 import net.efkrdnz.starwarsverse.StarwarsverseMod;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
@@ -32,6 +33,8 @@ public class StarwarsverseModEntities {
 			EntityType.Builder.<XwingAircraftEntity>of(XwingAircraftEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(3.2f, 3.2f));
+	public static final DeferredHolder<EntityType<?>, EntityType<LaserEntity>> LASER = register("laser",
+			EntityType.Builder.<LaserEntity>of(LaserEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

@@ -15,17 +15,17 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.core.registries.BuiltInRegistries;
 
+import net.efkrdnz.starwarsverse.block.entity.MultipurposeWorkbenchBlockEntity;
 import net.efkrdnz.starwarsverse.block.entity.LightsaberLightBlockBlockEntity;
-import net.efkrdnz.starwarsverse.block.entity.KyberInfuserBlockEntity;
 import net.efkrdnz.starwarsverse.block.entity.AircraftWorkbenchBlockEntity;
 import net.efkrdnz.starwarsverse.StarwarsverseMod;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class StarwarsverseModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, StarwarsverseMod.MODID);
-	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> KYBER_INFUSER = register("kyber_infuser", StarwarsverseModBlocks.KYBER_INFUSER, KyberInfuserBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> AIRCRAFT_WORKBENCH = register("aircraft_workbench", StarwarsverseModBlocks.AIRCRAFT_WORKBENCH, AircraftWorkbenchBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> LIGHTSABER_LIGHT_BLOCK = register("lightsaber_light_block", StarwarsverseModBlocks.LIGHTSABER_LIGHT_BLOCK, LightsaberLightBlockBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> MULTIPURPOSE_WORKBENCH = register("multipurpose_workbench", StarwarsverseModBlocks.MULTIPURPOSE_WORKBENCH, MultipurposeWorkbenchBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities
@@ -35,8 +35,8 @@ public class StarwarsverseModBlockEntities {
 
 	@SubscribeEvent
 	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, KYBER_INFUSER.get(), (blockEntity, side) -> ((KyberInfuserBlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, AIRCRAFT_WORKBENCH.get(), (blockEntity, side) -> ((AircraftWorkbenchBlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, LIGHTSABER_LIGHT_BLOCK.get(), (blockEntity, side) -> ((LightsaberLightBlockBlockEntity) blockEntity).getItemHandler());
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, MULTIPURPOSE_WORKBENCH.get(), (blockEntity, side) -> ((MultipurposeWorkbenchBlockEntity) blockEntity).getItemHandler());
 	}
 }

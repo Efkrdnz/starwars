@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "multipurpose_workbench_main",
+        "2": "multipurpose_workbench_monitor"
+      },
+      "name": "default"
+    }
+  }
+}

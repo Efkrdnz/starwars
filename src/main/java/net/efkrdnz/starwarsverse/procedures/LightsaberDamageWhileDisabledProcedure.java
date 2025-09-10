@@ -21,22 +21,34 @@ import javax.annotation.Nullable;
 public class LightsaberDamageWhileDisabledProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingIncomingDamageEvent event) {
-		if (event.getEntity() != null) {
-			execute(event, event.getSource(), event.getEntity());
+		if (event.getEntity() != null && event.getSource().getEntity() != null) {
+			execute(event, event.getSource(), event.getSource().getEntity());
 		}
 	}
 
-	public static void execute(DamageSource damagesource, Entity entity) {
-		execute(null, damagesource, entity);
+	public static void execute(DamageSource damagesource, Entity sourceEntity) {
+		execute(null, damagesource, sourceEntity);
 	}
 
-	private static void execute(@Nullable Event event, DamageSource damagesource, Entity entity) {
-		if (damagesource == null || entity == null)
+	private static void execute(@Nullable Event event, DamageSource damagesource, Entity sourceEntity) {
+		if (damagesource == null || sourceEntity == null)
 			return;
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("lightsaber")))
-				&& !((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("enabled")) && damagesource.is(DamageTypes.PLAYER_ATTACK)) {
-			if (event instanceof LivingIncomingDamageEvent _hurt) {
-				_hurt.setAmount(1);
+		// check if the attacker is holding a lightsaber
+		if (!(sourceEntity instanceof LivingEntity attacker))
+			return;
+		ItemStack weaponItem = attacker.getMainHandItem();
+		// check if weapon is a lightsaber with correct tag
+		if (!weaponItem.is(ItemTags.create(ResourceLocation.parse("minecraft:lightsaber"))))
+			return;
+		// check if lightsaber is disabled (not enabled)
+		boolean isEnabled = weaponItem.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("enabled");
+		if (isEnabled)
+			return; // lightsaber is enabled, use normal damage
+		// check if this is a player attack or entity attack
+		if (damagesource.is(DamageTypes.PLAYER_ATTACK) || damagesource.is(DamageTypes.MOB_ATTACK)) {
+			if (event instanceof LivingIncomingDamageEvent damageEvent) {
+				// set damage to 1 when lightsaber is disabled
+				damageEvent.setAmount(1.0f);
 			}
 		}
 	}

@@ -4,7 +4,7 @@
   "definition": {
     "renderType": 1,
     "texture": "lightsaber_countdooku",
-    "customModelName": "lightsabercountdookubase:default",
+    "customModelName": "lightsabercountdooku:default",
     "customProperties": {
       "color": {
         "name": "LightsaberCountDookuColorReturn"
@@ -14,7 +14,7 @@
       {
         "renderType": 1,
         "texture": "lightsaber_countdooku",
-        "customModelName": "lightsabercountdookublue:default",
+        "customModelName": "lightsabercountdooku-blue:default",
         "stateMap": [
           {
             "property": {
@@ -30,7 +30,7 @@
       {
         "renderType": 1,
         "texture": "lightsaber_countdooku",
-        "customModelName": "lightsabercountdookugreen:default",
+        "customModelName": "lightsabercountdooku-green:default",
         "stateMap": [
           {
             "property": {
@@ -46,7 +46,7 @@
       {
         "renderType": 1,
         "texture": "lightsaber_countdooku",
-        "customModelName": "lightsabercountdookuwhite:default",
+        "customModelName": "lightsabercountdooku-white:default",
         "stateMap": [
           {
             "property": {
@@ -62,7 +62,7 @@
       {
         "renderType": 1,
         "texture": "lightsaber_countdooku",
-        "customModelName": "lightsabercountdookuyellow:default",
+        "customModelName": "lightsabercountdooku-yellow:default",
         "stateMap": [
           {
             "property": {
@@ -78,7 +78,7 @@
       {
         "renderType": 1,
         "texture": "lightsaber_countdooku",
-        "customModelName": "lightsabercountdookuorange:default",
+        "customModelName": "lightsabercountdooku-orange:default",
         "stateMap": [
           {
             "property": {
@@ -94,7 +94,7 @@
       {
         "renderType": 1,
         "texture": "lightsaber_countdooku",
-        "customModelName": "lightsabercountdookupurple:default",
+        "customModelName": "lightsabercountdooku-purple:default",
         "stateMap": [
           {
             "property": {
@@ -110,7 +110,7 @@
       {
         "renderType": 1,
         "texture": "lightsaber_countdooku",
-        "customModelName": "lightsabercountdookured:default",
+        "customModelName": "lightsabercountdooku-red:default",
         "stateMap": [
           {
             "property": {
@@ -126,7 +126,7 @@
       {
         "renderType": 1,
         "texture": "lightsaber_countdooku",
-        "customModelName": "lightsabercountdookublack:default",
+        "customModelName": "lightsabercountdooku-black:default",
         "stateMap": [
           {
             "property": {
@@ -141,8 +141,12 @@
       }
     ],
     "name": "Lightsaber Count Dooku",
-    "rarity": "COMMON",
-    "creativeTabs": [],
+    "rarity": "EPIC",
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:StarwarsItems"
+      }
+    ],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,
@@ -168,6 +172,9 @@
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
       "name": "LightsaberRightClick"
+    },
+    "onEntitySwing": {
+      "name": "LightsaberSwingCon"
     },
     "enableRanged": false,
     "shootConstantly": false,

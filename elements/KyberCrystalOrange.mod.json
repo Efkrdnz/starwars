@@ -9,7 +9,11 @@
     "states": [],
     "name": "Kyber Crystal Orange",
     "rarity": "EPIC",
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:StarwarsItems"
+      }
+    ],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,

@@ -10,6 +10,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.minecraft.world.level.block.Block;
 
 import net.efkrdnz.starwarsverse.block.SteelChasingBlock;
+import net.efkrdnz.starwarsverse.block.MultipurposeWorkbenchBlock;
 import net.efkrdnz.starwarsverse.block.LightsaberLightBlockBlock;
 import net.efkrdnz.starwarsverse.block.KyberInfuserBlock;
 import net.efkrdnz.starwarsverse.block.AircraftWorkbenchBlock;
@@ -25,6 +26,7 @@ public class StarwarsverseModBlocks {
 	public static final DeferredBlock<Block> AIRCRAFT_ENGINE = REGISTRY.register("aircraft_engine", AircraftEngineBlock::new);
 	public static final DeferredBlock<Block> AIRCRAFT_WORKBENCH = REGISTRY.register("aircraft_workbench", AircraftWorkbenchBlock::new);
 	public static final DeferredBlock<Block> LIGHTSABER_LIGHT_BLOCK = REGISTRY.register("lightsaber_light_block", LightsaberLightBlockBlock::new);
+	public static final DeferredBlock<Block> MULTIPURPOSE_WORKBENCH = REGISTRY.register("multipurpose_workbench", MultipurposeWorkbenchBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }
