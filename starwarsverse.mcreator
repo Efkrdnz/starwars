@@ -2909,6 +2909,50 @@
         "dependencies": []
       },
       "path": "~/Lightsabers/Functions/Guard"
+    },
+    {
+      "name": "GuardOverlay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "guard_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/GuardOverlayProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Lightsabers/Functions"
+    },
+    {
+      "name": "GuardShape",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "guard_shape",
+      "metadata": {
+        "return_type": "shape",
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/GuardShapeProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Lightsabers/Functions"
+    },
+    {
+      "name": "GuardRingShape",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "guard_ring_shape",
+      "metadata": {
+        "return_type": "shape",
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/GuardRingShapeProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Lightsabers/Functions"
     }
   ],
   "variable_elements": [

@@ -128,33 +128,54 @@ public class GuardProjectileReflectionProcedure {
 		vars.syncPlayerVariables(entity);
 	}
 
-	// reflect projectile in player's look direction
+	// reflect projectile by creating new one and removing old
 	private static void reflectProjectile(Entity player, Projectile projectile) {
-		// get player's look direction
+		if (!(player.level() instanceof Level level)) {
+			return;
+		}
+		// get player's look direction and position
 		Vec3 lookDirection = player.getLookAngle().normalize();
-		// set new velocity with increased speed in look direction
-		Vec3 newVelocity = lookDirection.scale(REFLECTION_SPEED_MULTIPLIER);
-		projectile.setDeltaMovement(newVelocity);
-		// change projectile owner to the player to prevent self-damage
-		if (projectile instanceof AbstractArrow arrow) {
-			arrow.setOwner(player);
-		} else {
-			// for other projectiles, try to set owner using reflection
-			try {
-				var ownerField = projectile.getClass().getDeclaredField("owner");
-				ownerField.setAccessible(true);
-				ownerField.set(projectile, player);
-			} catch (Exception e) {
-				// fallback: set shooter field if exists
-				try {
-					var shooterField = projectile.getClass().getDeclaredField("shooter");
-					shooterField.setAccessible(true);
-					shooterField.set(projectile, player);
-				} catch (Exception ignored) {
-					// if we can't change owner, projectile will still be reflected
-				}
+		Vec3 startPos = player.getEyePosition().add(lookDirection.scale(0.5));
+		// create new projectile based on original type
+		Projectile newProjectile = createReflectedProjectile(level, player, projectile, startPos, lookDirection);
+		if (newProjectile != null) {
+			// set velocity with speed boost
+			Vec3 velocity = lookDirection.scale(REFLECTION_SPEED_MULTIPLIER);
+			newProjectile.setDeltaMovement(velocity);
+			// spawn the new projectile
+			level.addFreshEntity(newProjectile);
+		}
+		// remove original projectile
+		projectile.discard();
+	}
+
+	// create new projectile based on original type
+	private static Projectile createReflectedProjectile(Level level, Entity owner, Projectile original, Vec3 startPos, Vec3 direction) {
+		try {
+			// create new projectile of same type
+			Projectile newProjectile = (Projectile) original.getType().create(level);
+			if (newProjectile == null) {
+				return null;
+			}
+			// set position and owner
+			newProjectile.setPos(startPos.x, startPos.y, startPos.z);
+			newProjectile.setOwner(owner);
+			// copy damage and other properties if it's an arrow
+			if (original instanceof AbstractArrow originalArrow && newProjectile instanceof AbstractArrow newArrow) {
+				newArrow.setBaseDamage(originalArrow.getBaseDamage());
+				newArrow.setCritArrow(originalArrow.isCritArrow());
+				// skip pierce level since it's private access
+			}
+			return newProjectile;
+		} catch (Exception e) {
+			// fallback: create a basic arrow if we can't create the original type
+			if (owner instanceof LivingEntity livingOwner) {
+				AbstractArrow arrow = new net.minecraft.world.entity.projectile.Arrow(level, livingOwner, ItemStack.EMPTY, null);
+				arrow.setPos(startPos.x, startPos.y, startPos.z);
+				return arrow;
 			}
 		}
+		return null;
 	}
 
 	// play random block animation for reflection
