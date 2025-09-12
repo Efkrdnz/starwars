@@ -10,6 +10,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
 import net.efkrdnz.starwarsverse.client.renderer.XwingAircraftRenderer;
+import net.efkrdnz.starwarsverse.client.renderer.StormTrooperRenderer;
 import net.efkrdnz.starwarsverse.client.renderer.PlanetTatooineRenderer;
 import net.efkrdnz.starwarsverse.client.renderer.PlanetEarthRenderer;
 import net.efkrdnz.starwarsverse.client.renderer.LaserRenderer;
@@ -22,5 +23,6 @@ public class StarwarsverseModEntityRenderers {
 		event.registerEntityRenderer(StarwarsverseModEntities.PLANET_TATOOINE.get(), PlanetTatooineRenderer::new);
 		event.registerEntityRenderer(StarwarsverseModEntities.XWING_AIRCRAFT.get(), XwingAircraftRenderer::new);
 		event.registerEntityRenderer(StarwarsverseModEntities.LASER.get(), LaserRenderer::new);
+		event.registerEntityRenderer(StarwarsverseModEntities.STORM_TROOPER.get(), StormTrooperRenderer::new);
 	}
 }

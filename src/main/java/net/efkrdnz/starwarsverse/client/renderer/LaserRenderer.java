@@ -16,7 +16,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class LaserRenderer extends EntityRenderer<LaserEntity> {
-	private static final ResourceLocation texture = ResourceLocation.parse("starwarsverse:textures/entities/laserbeam.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("starwarsverse:textures/entities/laserbeam1.png");
 	private final Modellaserbeam model;
 
 	public LaserRenderer(EntityRendererProvider.Context context) {
@@ -26,11 +26,13 @@ public class LaserRenderer extends EntityRenderer<LaserEntity> {
 
 	@Override
 	public void render(LaserEntity entityIn, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource bufferIn, int packedLightIn) {
-		VertexConsumer vb = bufferIn.getBuffer(RenderType.entityCutout(this.getTextureLocation(entityIn)));
+		// render with emissive render type for glow effect
+		VertexConsumer vb = bufferIn.getBuffer(RenderType.eyes(this.getTextureLocation(entityIn)));
 		poseStack.pushPose();
 		poseStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(partialTicks, entityIn.yRotO, entityIn.getYRot()) - 90));
 		poseStack.mulPose(Axis.ZP.rotationDegrees(90 + Mth.lerp(partialTicks, entityIn.xRotO, entityIn.getXRot())));
-		model.renderToBuffer(poseStack, vb, packedLightIn, OverlayTexture.NO_OVERLAY);
+		// use full bright lighting to make it glow - same value as particles use
+		model.renderToBuffer(poseStack, vb, 15728880, OverlayTexture.NO_OVERLAY);
 		poseStack.popPose();
 		super.render(entityIn, entityYaw, partialTicks, poseStack, bufferIn, packedLightIn);
 	}

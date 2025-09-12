@@ -34,6 +34,8 @@ public class StarwarsverseModTabs {
 				tabData.accept(StarwarsverseModItems.KYBER_CRYSTAL_PURPLE.get());
 				tabData.accept(StarwarsverseModItems.KYBER_CRYSTAL_BLACK.get());
 				tabData.accept(StarwarsverseModBlocks.MULTIPURPOSE_WORKBENCH.get().asItem());
+				tabData.accept(StarwarsverseModItems.TEST_BLASTER.get());
+				tabData.accept(StarwarsverseModItems.STORM_TROOPER_SPAWN_EGG.get());
 			})
 
 					.build());
@@ -47,6 +49,7 @@ public class StarwarsverseModTabs {
 		} else if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
 
 			tabData.accept(StarwarsverseModItems.XWING_AIRCRAFT_SPAWN_EGG.get());
+			tabData.accept(StarwarsverseModItems.STORM_TROOPER_SPAWN_EGG.get());
 
 		}
 	}

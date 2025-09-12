@@ -137,7 +137,7 @@ public class GuardRingShapeProcedure {
 
 	// color determination based on guard value
 	private static int getGuardColor(double guardValue) {
-		if (guardValue >= 36) { // 60% of 60 = 36
+		if (guardValue >= 60) { // 60% of 60 = 36
 			return 255 << 24 | 255 << 16 | 0 << 8 | 0; // red - not blockable
 		} else if (guardValue >= 18) { // 30% of 60 = 18
 			return 255 << 24 | 32 << 16 | 90 << 8 | 171; // blue - normal block

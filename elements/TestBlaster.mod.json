@@ -9,10 +9,14 @@
     "states": [],
     "name": "Test Blaster",
     "rarity": "COMMON",
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:StarwarsItems"
+      }
+    ],
     "stackSize": 64,
     "enchantability": 0,
-    "useDuration": 0,
+    "useDuration": 4,
     "toolType": 1.0,
     "damageCount": 0,
     "recipeRemainder": {
@@ -33,13 +37,13 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "enableRanged": false,
+    "enableRanged": true,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
     "projectile": {
       "value": "CUSTOM:Laser"
     },
-    "projectileDisableAmmoCheck": false,
+    "projectileDisableAmmoCheck": true,
     "isFood": false,
     "nutritionalValue": 4,
     "saturation": 0.3,

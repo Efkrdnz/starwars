@@ -1,15 +1,16 @@
 {
-  "key.starwarsverse.ability_2": "Ability 2",
-  "block.starwarsverse.kyber_infuser": "Kyber Infuser",
   "item_group.starwarsverse.starwars_items": "Starwars Items",
-  "gui.starwarsverse.forcemenugui.button_force_hold": "Force Hold",
+  "block.starwarsverse.kyber_infuser": "Kyber Infuser",
+  "key.starwarsverse.ability_2": "Ability 2",
   "key.starwarsverse.ability_3": "Ability 3",
+  "gui.starwarsverse.forcemenugui.button_force_hold": "Force Hold",
   "gui.starwarsverse.forcemenugui.button_force_pull": "Force Pull",
   "gui.starwarsverse.multipurpose_workbench_gui.tooltip_kyber_crystal_infusion1": "Kyber Crystal Infusion",
-  "biome.starwarsverse.space_biome": "Space Biome",
   "gui.starwarsverse.multipurpose_workbench_gui.tooltip_kyber_crystal_infusion2": "Kyber Crystal Infusion",
+  "biome.starwarsverse.space_biome": "Space Biome",
   "gui.starwarsverse.multipurpose_workbench_gui.tooltip_kyber_crystal_infusion3": "Kyber Crystal Infusion",
   "death.attack.force_push": "%1$s pushed to death!",
+  "item.starwarsverse.storm_trooper_spawn_egg": "Storm Trooper Spawn Egg",
   "key.starwarsverse.ability_1": "Ability 1",
   "death.attack.force_push.player": "%1$s died whilst trying to escape %2$s",
   "item.starwarsverse.kyber_crystal_red": "Kyber Crystal Red",
@@ -80,5 +81,6 @@
   "item.starwarsverse.kyber_crystal_orange": "Kyber Crystal Orange",
   "gui.starwarsverse.mb_kyber_infuser_gui.tooltip_kyber_crystal_infusion": "Kyber Crystal Infusion",
   "item.starwarsverse.lightsaber_anakin": "Lightsaber Anakin",
+  "entity.starwarsverse.storm_trooper": "Storm Trooper",
   "block.starwarsverse.aircraft_workbench": "Aircraft Workbench"
 }

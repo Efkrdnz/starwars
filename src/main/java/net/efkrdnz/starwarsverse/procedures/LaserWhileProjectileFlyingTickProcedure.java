@@ -7,5 +7,10 @@ public class LaserWhileProjectileFlyingTickProcedure {
 		if (immediatesourceentity == null)
 			return;
 		immediatesourceentity.setNoGravity(true);
+		immediatesourceentity.getPersistentData().putDouble("life", (immediatesourceentity.getPersistentData().getDouble("life") + 1));
+		if (immediatesourceentity.getPersistentData().getDouble("life") >= 40) {
+			if (!immediatesourceentity.level().isClientSide())
+				immediatesourceentity.discard();
+		}
 	}
 }

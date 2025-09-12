@@ -10,11 +10,11 @@
       "value": ""
     },
     "igniteFire": false,
-    "power": 1.0,
+    "power": 3.0,
     "damage": 5.0,
     "knockback": 0,
     "entityModel": "Modellaserbeam",
-    "customModelTexture": "laserbeam.png",
+    "customModelTexture": "laserbeam1.png",
     "modelWidth": 0.5,
     "modelHeight": 0.5,
     "onFlyingTick": {

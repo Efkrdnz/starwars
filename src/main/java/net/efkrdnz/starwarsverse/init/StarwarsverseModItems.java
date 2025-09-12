@@ -58,6 +58,7 @@ public class StarwarsverseModItems {
 	public static final DeferredItem<Item> XWING_AIRCRAFT_SPAWN_EGG = REGISTRY.register("xwing_aircraft_spawn_egg", () -> new DeferredSpawnEggItem(StarwarsverseModEntities.XWING_AIRCRAFT, -1, -1, new Item.Properties()));
 	public static final DeferredItem<Item> MULTIPURPOSE_WORKBENCH = block(StarwarsverseModBlocks.MULTIPURPOSE_WORKBENCH);
 	public static final DeferredItem<Item> TEST_BLASTER = REGISTRY.register("test_blaster", TestBlasterItem::new);
+	public static final DeferredItem<Item> STORM_TROOPER_SPAWN_EGG = REGISTRY.register("storm_trooper_spawn_egg", () -> new DeferredSpawnEggItem(StarwarsverseModEntities.STORM_TROOPER, -1, -16777216, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

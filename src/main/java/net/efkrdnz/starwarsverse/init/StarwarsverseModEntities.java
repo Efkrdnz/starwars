@@ -17,6 +17,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.core.registries.Registries;
 
 import net.efkrdnz.starwarsverse.entity.XwingAircraftEntity;
+import net.efkrdnz.starwarsverse.entity.StormTrooperEntity;
 import net.efkrdnz.starwarsverse.entity.PlanetTatooineEntity;
 import net.efkrdnz.starwarsverse.entity.PlanetEarthEntity;
 import net.efkrdnz.starwarsverse.entity.LaserEntity;
@@ -35,6 +36,10 @@ public class StarwarsverseModEntities {
 					.sized(3.2f, 3.2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<LaserEntity>> LASER = register("laser",
 			EntityType.Builder.<LaserEntity>of(LaserEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final DeferredHolder<EntityType<?>, EntityType<StormTrooperEntity>> STORM_TROOPER = register("storm_trooper",
+			EntityType.Builder.<StormTrooperEntity>of(StormTrooperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -47,6 +52,7 @@ public class StarwarsverseModEntities {
 		PlanetEarthEntity.init(event);
 		PlanetTatooineEntity.init(event);
 		XwingAircraftEntity.init(event);
+		StormTrooperEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -54,5 +60,6 @@ public class StarwarsverseModEntities {
 		event.put(PLANET_EARTH.get(), PlanetEarthEntity.createAttributes().build());
 		event.put(PLANET_TATOOINE.get(), PlanetTatooineEntity.createAttributes().build());
 		event.put(XWING_AIRCRAFT.get(), XwingAircraftEntity.createAttributes().build());
+		event.put(STORM_TROOPER.get(), StormTrooperEntity.createAttributes().build());
 	}
 }
