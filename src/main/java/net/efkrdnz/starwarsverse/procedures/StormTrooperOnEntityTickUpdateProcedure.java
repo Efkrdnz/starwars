@@ -12,7 +12,7 @@ public class StormTrooperOnEntityTickUpdateProcedure {
 		Entity trg = null;
 		if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 			trg = entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null;
-			entity.lookAt(EntityAnchorArgument.Anchor.EYES, new Vec3((trg.getX()), (trg.getY() + trg.getBbHeight() * (2 / 3)), (trg.getZ())));
+			entity.lookAt(EntityAnchorArgument.Anchor.EYES, new Vec3((trg.getX()), (trg.getY() + trg.getBbHeight() * (1 / 2)), (trg.getZ())));
 		}
 	}
 }

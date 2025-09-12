@@ -2897,20 +2897,6 @@
       "path": "~/Blocks/MultipurposeWorkbench/KyberInfuserGUI"
     },
     {
-      "name": "GuardProjectileReflection",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "guard_projectile_reflection",
-      "metadata": {
-        "files": [
-          "src/main/java/net/efkrdnz/starwarsverse/procedures/GuardProjectileReflectionProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Lightsabers/Functions/Guard"
-    },
-    {
       "name": "GuardOverlay",
       "type": "procedure",
       "compiles": true,
@@ -2958,7 +2944,7 @@
       "name": "StormTrooper",
       "type": "livingentity",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "storm_trooper",
       "metadata": {
         "files": [
@@ -3006,6 +2992,37 @@
         ]
       },
       "path": "~/Teams"
+    },
+    {
+      "name": "LaserProjectileHitsLivingEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "laser_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/efkrdnz/starwarsverse/procedures/LaserProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blasters/Projectile"
     }
   ],
   "variable_elements": [

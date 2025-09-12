@@ -27,6 +27,8 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 
 import net.efkrdnz.starwarsverse.network.StarwarsverseModVariables;
+import net.efkrdnz.starwarsverse.init.StarwarsverseModEntities;
+import net.efkrdnz.starwarsverse.entity.LaserEntity;
 
 import javax.annotation.Nullable;
 
@@ -35,10 +37,11 @@ import dev.kosmx.playerAnim.api.AnimUtils;
 
 @EventBusSubscriber
 public class GuardProjectilenonparryProcedure {
-	private static final double MIN_GUARD_REQUIRED = 5.0; // minimum guard points needed to block
-	private static final double MAX_GUARD_REQUIRED = 60.0; //maximum guard points needed to block
-	private static final double GUARD_COST_PER_BLOCK = 3.0; // guard points consumed per successful block
-	private static final double MAX_BLOCK_ANGLE = 90.0; // max angle in degrees for successful block
+	private static final double MIN_GUARD_REQUIRED = 5.0;
+	private static final double MAX_GUARD_REQUIRED = 60.0;
+	private static final double GUARD_COST_PER_BLOCK = 5.0;
+	private static final double MAX_BLOCK_ANGLE = 90.0;
+	private static final double LASER_REFLECTION_INACCURACY = 8.0;
 
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingIncomingDamageEvent event) {
@@ -62,27 +65,50 @@ public class GuardProjectilenonparryProcedure {
 		if (!(sourceentity instanceof Projectile || immediatesourceentity instanceof Projectile)) {
 			return;
 		}
+		// get the actual projectile entity
+		Projectile projectile = getProjectileEntity(sourceentity, immediatesourceentity);
+		if (projectile == null) {
+			return;
+		}
 		// check guard points
 		StarwarsverseModVariables.PlayerVariables playerVars = entity.getData(StarwarsverseModVariables.PLAYER_VARIABLES);
 		if (playerVars.guard < MIN_GUARD_REQUIRED) {
-			return; // not enough guard points to block
+			return;
 		}
-		//check guard timer max
 		if (playerVars.guard >= MAX_GUARD_REQUIRED) {
-			return; // over the limit
+			return;
 		}
 		// check if player is facing the projectile direction
-		if (!isFacingProjectile(entity, immediatesourceentity)) {
-			return; // player not facing the right direction
+		if (!isFacingProjectile(entity, projectile)) {
+			return;
 		}
-		// successful block - cancel damage and play effects
+		// successful block - cancel damage
 		if (event instanceof ICancellableEvent cancellable) {
 			cancellable.setCanceled(true);
 		}
-		// play random block animation
+		// handle laserbeam reflection vs other projectile blocking
+		if (projectile instanceof LaserEntity) {
+			// reflect laserbeam with inaccuracy
+			reflectLaserbeam(world, entity, projectile);
+		} else {
+			// other projectiles just disappear
+			projectile.discard();
+		}
+		// consume guard points and play effects
+		consumeGuardPoints(entity, GUARD_COST_PER_BLOCK);
 		playRandomBlockAnimation(world, entity);
-		// play block sound
 		playBlockSound(world, entity);
+	}
+
+	// get the projectile entity from damage source
+	private static Projectile getProjectileEntity(Entity sourceentity, Entity immediatesourceentity) {
+		if (sourceentity instanceof Projectile projectile) {
+			return projectile;
+		}
+		if (immediatesourceentity instanceof Projectile projectile) {
+			return projectile;
+		}
+		return null;
 	}
 
 	// check if player has enabled lightsaber
@@ -95,7 +121,6 @@ public class GuardProjectilenonparryProcedure {
 	private static boolean isFacingProjectile(Entity player, Entity projectile) {
 		Vec3 playerLookDirection = player.getLookAngle().normalize();
 		Vec3 toProjectile = projectile.position().subtract(player.position()).normalize();
-		// calculate angle between player look direction and projectile direction
 		double dotProduct = playerLookDirection.dot(toProjectile);
 		double angle = Math.acos(Mth.clamp(dotProduct, -1.0, 1.0)) * (180.0 / Math.PI);
 		return angle <= MAX_BLOCK_ANGLE;
@@ -106,6 +131,37 @@ public class GuardProjectilenonparryProcedure {
 		StarwarsverseModVariables.PlayerVariables vars = entity.getData(StarwarsverseModVariables.PLAYER_VARIABLES);
 		vars.guard = Math.max(0, vars.guard - cost);
 		vars.syncPlayerVariables(entity);
+	}
+
+	// reflect laserbeam with inaccuracy
+	private static void reflectLaserbeam(LevelAccessor world, Entity player, Projectile originalLaser) {
+		if (!(world instanceof Level level) || !(player instanceof LivingEntity livingPlayer)) {
+			originalLaser.discard();
+			return;
+		}
+		// get player's look direction with added inaccuracy
+		Vec3 lookDirection = player.getLookAngle().normalize();
+		RandomSource random = level.getRandom();
+		// add some inaccuracy to reflection
+		double spreadX = (random.nextGaussian() * LASER_REFLECTION_INACCURACY) / 100.0;
+		double spreadY = (random.nextGaussian() * LASER_REFLECTION_INACCURACY) / 100.0;
+		double spreadZ = (random.nextGaussian() * LASER_REFLECTION_INACCURACY) / 100.0;
+		Vec3 inaccurateDirection = lookDirection.add(spreadX, spreadY, spreadZ).normalize();
+		Vec3 startPos = player.getEyePosition().add(inaccurateDirection.scale(0.5));
+		// create new laser projectile
+		LaserEntity newLaser = new LaserEntity(StarwarsverseModEntities.LASER.get(), livingPlayer, level, null);
+		newLaser.setPos(startPos.x, startPos.y, startPos.z);
+		newLaser.setOwner(player);
+		// set velocity with slight speed boost
+		Vec3 velocity = inaccurateDirection.scale(3.2);
+		newLaser.setDeltaMovement(velocity);
+		newLaser.setSilent(true);
+		newLaser.setBaseDamage(5);
+		newLaser.setCritArrow(false);
+		// spawn the reflected laser
+		level.addFreshEntity(newLaser);
+		// remove original laser
+		originalLaser.discard();
 	}
 
 	// play random block animation
@@ -126,14 +182,12 @@ public class GuardProjectilenonparryProcedure {
 	private static void playBlockAnimation(LevelAccessor world, Entity entity, String animationName) {
 		AnimUtils.disableFirstPersonAnim = true;
 		if (world.isClientSide()) {
-			// check if animation exists before playing on client
 			if (PlayerAnimationRegistry.getAnimation(ResourceLocation.fromNamespaceAndPath("starwarsverse", animationName)) != null) {
 				SetupAnimationsProcedure.setAnimationClientside((Player) entity, animationName, false);
 			}
 		}
 		if (!world.isClientSide()) {
 			if (entity instanceof Player) {
-				// send network message from server
 				PacketDistributor.sendToPlayersInDimension((ServerLevel) entity.level(), new SetupAnimationsProcedure.StarwarsverseModAnimationMessage(animationName, entity.getId(), false));
 			}
 		}

@@ -11,12 +11,15 @@
     },
     "igniteFire": false,
     "power": 3.0,
-    "damage": 5.0,
+    "damage": 0.0,
     "knockback": 0,
     "entityModel": "Modellaserbeam",
     "customModelTexture": "laserbeam1.png",
     "modelWidth": 0.5,
     "modelHeight": 0.5,
+    "onHitsEntity": {
+      "name": "LaserProjectileHitsLivingEntity"
+    },
     "onFlyingTick": {
       "name": "LaserWhileProjectileFlyingTick"
     }

@@ -1,0 +1,7 @@
+{
+  "_fv": 69,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"set_invulnerable_time\"><value name=\"entity\"><block type=\"entity_from_deps\"></block></value><value name=\"time\"><block type=\"math_number\"><field name=\"NUM\">0</field></block></value><next><block type=\"entity_despawn\"><value name=\"entity\"><block type=\"immediate_source_entity_from_deps\"></block></value><next><block type=\"deal_damage\"><value name=\"amount\"><block type=\"math_number\"><field name=\"NUM\">4</field></block></value><value name=\"entity\"><block type=\"entity_from_deps\"></block></value><value name=\"damagesource\"><block type=\"damagesource_from_type_cause_directcause\"><field name=\"damagetype\">MOB_PROJECTILE</field><value name=\"cause\"><block type=\"source_entity_from_deps\"></block></value><value name=\"directcause\"><block type=\"immediate_source_entity_from_deps\"></block></value></block></value></block></next></block></next></block></next></block></xml>"
+  }
+}

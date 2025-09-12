@@ -5,6 +5,7 @@ import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
@@ -17,6 +18,7 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.RandomSource;
 
 import net.efkrdnz.starwarsverse.procedures.LaserWhileProjectileFlyingTickProcedure;
+import net.efkrdnz.starwarsverse.procedures.LaserProjectileHitsLivingEntityProcedure;
 import net.efkrdnz.starwarsverse.init.StarwarsverseModEntities;
 
 import javax.annotation.Nullable;
@@ -71,6 +73,12 @@ public class LaserEntity extends AbstractArrow implements ItemSupplier {
 	}
 
 	@Override
+	public void onHitEntity(EntityHitResult entityHitResult) {
+		super.onHitEntity(entityHitResult);
+		LaserProjectileHitsLivingEntityProcedure.execute(this.level(), entityHitResult.getEntity(), this, this.getOwner());
+	}
+
+	@Override
 	public void tick() {
 		super.tick();
 		LaserWhileProjectileFlyingTickProcedure.execute(this);
@@ -79,11 +87,11 @@ public class LaserEntity extends AbstractArrow implements ItemSupplier {
 	}
 
 	public static LaserEntity shoot(Level world, LivingEntity entity, RandomSource source) {
-		return shoot(world, entity, source, 3f, 5, 0);
+		return shoot(world, entity, source, 3f, 0, 0);
 	}
 
 	public static LaserEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
-		return shoot(world, entity, source, pullingPower * 3f, 5, 0);
+		return shoot(world, entity, source, pullingPower * 3f, 0, 0);
 	}
 
 	public static LaserEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
@@ -104,7 +112,7 @@ public class LaserEntity extends AbstractArrow implements ItemSupplier {
 		double dz = target.getZ() - entity.getZ();
 		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 3f * 2, 12.0F);
 		entityarrow.setSilent(true);
-		entityarrow.setBaseDamage(5);
+		entityarrow.setBaseDamage(0);
 		entityarrow.setKnockback(0);
 		entityarrow.setCritArrow(false);
 		entity.level().addFreshEntity(entityarrow);
